@@ -2,61 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oğuzhan Bayram CV</title>
-    <!-- İmaj ekleme: -->
-    <link rel="stylesheet" href="images/ob.JPG">
-    <link rel="stylesheet" href="images/ob2.png">
-    <!-- referans dokuanlar: -->
+    <title>Home</title>
+    <!-- reference documents: -->
     <link rel="stylesheet" href="style.css">
-    <!-- alınan font ailesi: -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <!-- icon alınan link: -->       
+    <!-- reference icons: -->       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+</head>
 <body>
-    <header class="navbar-container">
-        <nav>
-            <div class="navbar-icon">
-                <i class="fa-solid fa-display"></i>
-                <i class="fa-solid fa-keyboard"></i>
-            </div>
-            <div class="navbar-links">
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="index.html"><i class="fa-solid fa-globe"></i></a>     
-                    <a  class="navbar-link" href="index.html"><span id="navbar-link-text">Hakkımda</span></a>
-                </div>
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="job.html"><i class="fa-solid fa-school"></i></a> 
-                    <a  class="navbar-link" href="job.html"><span id="navbar-link-text">Kariyerim</span></a>
-                </div>
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="education.html"><i class="fa-solid fa-graduation-cap"></i></a>   
-                    <a  class="navbar-link" href="education.html"><span id="navbar-link-text">Eğitim Hayatım</span></a>
-                </div>
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="project.html"><i class="fa-solid fa-landmark"></i></a>
-                    <a  class="navbar-link" href="project.html"><span id="navbar-link-text">Projelerim</span></a>
-                </div>
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="skill.html"><i class="fa-solid fa-star"></i></a>
-                    <a  class="navbar-link" href="skill.html"><span id="navbar-link-text">Yeteneklerim</span></a>
-                </div>
-                <div id="navbar-link">
-                    <a  class="navbar-link" href="contact-info.html"><i class="fa-solid fa-address-card"></i></a>   
-                    <a  class="navbar-link" href="contact-info.html"><span id="navbar-link-text">İletişim Bilgilerim</span></a>
-                </div>
-                <!-- <button><i class="fa-solid fa-angles-down"></i></button> -->            
-            </div> 
-                <!-- <button><i class="fa-solid fa-angles-down"></i></button> -->            
-            </div>                                        
+    <header>
+        <nav>            
+            <div class="pages">
+                <a href="index.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-globe fa-2xl"></i>
+                        <h3>Home Page</h3>                       
+                    </div>
+                </a>
+                <a href="project.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-folder-open fa-2xl"></i>
+                        <h3>Projects</h3>
+                    </div>
+                </a>
+                <a href="skill.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-star fa-2xl"></i>
+                        <h3>Skills</h3>
+                    </div>
+                </a>
+                <a href="job.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-school fa-2xl"></i>
+                        <h3>Jobs</h3>
+                    </div>
+                </a>
+                <a href="education.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+                        <h3>Educations</h3>
+                    </div>
+                </a>
+                <a href="contact-info.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-address-card fa-2xl"></i>
+                        <h3>Contact Me</h3>
+                    </div>
+                </a>                
+            </div>           
         </nav>        
     </header>
     <main>
+        <div class="project-card">
+            <h1>exarion nextjs project <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>SSR (Server-side rendering) of the initial page load.</li>
+                <li>A web application where we can view the list of Github users or any specific user with their profile information</li>
+                <li>Technologies: ReactJS, NextJS, NodeJS</li>
+                <li><a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank">Go to github</a></li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h1>KonfidesCase <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>N-Tier Architecture design pattern used.</li>
+                <li>The project is divided into Authentication, DAL, BLL, DTO, Entity, API and UI (User Interface) layers.</li>
+                <li>Used role based (Admin, User) MVC Project for UI .</li>
+                <li>MVC project is divided into Areas, BusinessLogic, Controllers,  wwwroot, Models, ViewModels and Views folders.</li>
+                <li>HttpClientFactory is used in MVC project to communicate with API project.</li>
+                <li>Technologies: ASP .NET Core, EntityFramework Core, Newtonsoft</li>
+                <li><a href="https://github.com/Oguzhan13/KonfidesCase" target="blank">Go to github</a></li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h1>Ajax HttpClientApi <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>Javascript functions (AJAX) were used for Http methods in the API project.</li>
+                <li>Technologies: ASP .NET Core, Newtonsoft</li>                
+                <li><a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank">Go to github</a></li>
+            </ul>
+        </div>  
+        <div class="project-card">
+            <h1>NTier.UI MVC <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>N-Tier Architecture design pattern used.</li>
+                <li>The project is divided into Core, Data Access, Business Logic and User Interface layers. </li>
+                <li>MVC (Model-View-Controller) technolog was used for the UI Layer.</li>
+                <li>Technologies: ASP .NET Core, EntityFramework Core</li>
+                <li><a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank">Go to github</a></li>
+            </ul>
+        </div>  
+        <div class="project-card">
+            <h1>ASP.NETCore WebAPI WithJWT UsingBogus <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>N-Tier Architecture design pattern used.</li>
+                <li>Jason Web Token and IdentityUser class are used for the authentication processes. </li>
+                <li>Technologies: ASP .NET Core, EntityFramework, EntityFramework Core, Bogus, JwtBearer</li>                
+                <li><a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank">Go to github</a></li>
+            </ul>
+        </div>  
+        <div class="project-card">
+            <h1>WebAPI Using WatchDog <i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>Signed in using WatchDog package.</li>
+                <li>Technologies: ASP .NET Core, MSSQL </li>                            
+                <li><a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank">Go to github</a></li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h1>BACampus App<i class="fa-solid fa-eye"></i></h1>
+            <ul class="hidden-content">
+                <hr/><br>
+                <li>With this application, users can view their profiles, registered training programs and information about training programs, and take actions on a role basis.</li>
+                <li>ASP .NET Core and Entity Framework Core technologies are used.</li>
+                <li>Code First approach is applied.</li>
+                <li>Scrum framework is adopted. Azure DevOps is used for scrum board and repo.</li>
+                <li>Cloud Database is used.</li>
+                <li>The project can be shown upon request.</li>                                            
+            </ul>
+        </div>                                         
+    </main>
+    <footer>
 
-    </main>    
+    </footer>
+    <script>
+        const icons = document.querySelectorAll('.project-card i.fa-eye, .project-card i.fa-eye-slash');
+      
+        icons.forEach(function(icon) {
+          icon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const hiddenContent = icon.parentNode.nextElementSibling;
+            hiddenContent.style.display = hiddenContent.style.display === 'block' ? 'none' : 'block';
+            
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+        });
+      </script>
 </body>
 </html>
