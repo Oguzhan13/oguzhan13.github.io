@@ -54,10 +54,140 @@
         </nav>        
     </header>
     <main>
-       
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">
+                    <img src="images/job/BilgeAdamLogo.svg" alt="Bilge Adam Technology Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>Bilge Adam Technology</h1>
+                <h2>Full Stack Developer intern</h2>
+                <h3>01/2023 - 03/2023</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>
+                    <li><h4>Taking role as full stack developer in BACampus App project.</h4></li>
+                    <li><h4>Technologies: N-tier Architecture, Asp.Net Core API, Entity Framework, Fluent API, Fluent Validation, MSSQL</h4></li>
+                    <li><a href="https://www.bilgeadam.com/" target="_blank">Go to Bilge Adam Technology</a></li>
+                </ul>
+            </div>              
+        </div> 
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">
+                    <img src="images/job/BaytimurLogo.jpeg" alt="Baytimur Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>Baytimur İnşaat</h1>
+                <h2>Survey Engineer</h2>
+                <h3>03/2021 - 06/2022</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>
+                    <li><h4>I took part in Edirne Meriç irrigation project.</h4></li>
+                    <li><h4>Working with applications such as Autocad and Netcad, I took part in the revision of the project.</h4></li>
+                    <li><h4>I took part in field inspections.</h4></li>     
+                    <li><h4>I took part in the job security follow-up processes.</h4></li>               
+                    <li><a href="https://www.baytimurinsaat.com/" target="_blank">Go to Baytimur İnşaat</a></li>
+                </ul>
+            </div>              
+        </div> 
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">                    
+                    <img src="images/job/HAPA.JPG" alt="HAPA Mühendislik Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>HAPA Mühendislik</h1>
+                <h2>Survey Engineer</h2>
+                <h3>07/2019 - 03/2020</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>                    
+                    <li><h4>Digitization of the archive of the 9th KGM (Karayolları Genel Müdürlüğü).</h4></li>
+                    <li><a href="http://www.hapa.com.tr/ana-sayfa" target="_blank">Go to HAPA Mühendislik</a></li>
+                </ul>
+            </div>              
+        </div> 
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">                    
+                    <img src="images/job/MRT.JPG" alt="HK Harita Planlama Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>HK Harita Planlama</h1>
+                <h2>Survey Engineer</h2>
+                <h3>10/2017 - 02/2018</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>                    
+                    <li><h4>As the chief of a 22/a 3rd Group Cadastre Renovation project I took office</h4></li>
+                    <li><a href="http://hkharita.com.tr/" target="_blank">Go to HK Harita Planlama</a></li>
+                </ul>
+            </div>              
+        </div>    
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">                    
+                    <img src="images/job/formgd.png" alt="Form Gayrimenkul Değerleme ve Danışmanlık A.Ş. Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>Form Gayrimenkul Değerleme ve Danışmanlık A.Ş.</h1>
+                <h2>Real-estate Expert</h2>
+                <h3>03/2015 - 08/2015</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>                    
+                    <li><h4>I made real estate appraisal for the city of Ankara and its surroundings.</h4></li>
+                    <li><a href="https://formgd.com.tr/" target="_blank">Go to Form Gayrimenkul</a></li>
+                </ul>
+            </div>              
+        </div>
+        <div class="job-card">
+            <div>
+                <div class="job-card-header">                    
+                    <img src="images/job/mil-teknik.JPG" alt="Mil Teknik Harita Logo">
+                    <h1><i class="fa-solid fa-eye"></i></h1>
+                </div>
+                <h1>Mil Teknik Harita</h1>
+                <h2>Survey Engineer</h2>
+                <h3>11/2014 - 03/2015</h3>
+            </div>
+            <div class="hidden-content">
+                <ul>
+                    <hr/>                    
+                    <li><h4>I took part in 22/a application for Kemalpaşa and Torbalı districts in the city of İzmir.</h4></li>
+                    <li><a href="https://www.milteknik.com.tr/" target="_blank">Go to Mil Teknik Harita</a></li>
+                </ul>
+            </div>              
+        </div> 
     </main>
     <footer>
 
     </footer>
+    <script>        
+        var icons = document.querySelectorAll('.job-card i.fa-eye');
+            
+        icons.forEach(function(icon) {            
+            icon.addEventListener('click', function() {                
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');               
+                
+                var hiddenContent = this.closest('.job-card').querySelector('.hidden-content');
+                hiddenContent.classList.toggle('show');
+            });
+        });
+            
+        document.querySelectorAll('.job-card .hidden-content').forEach(function(content) {
+            content.addEventListener('click', function(e) {    
+                e.stopPropagation();
+            });
+        });
+    </script>
 </body>
 </html>
