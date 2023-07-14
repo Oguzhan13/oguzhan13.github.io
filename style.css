@@ -11,11 +11,45 @@
     --primary-text-color: rgb(221, 231, 228);
     --secondary-text-color: rgb(120, 136, 118);
     --extra-color-dark: rgb(92, 128, 64);
-    --extra-color-light: rgb(131, 190, 85);
+    --extra-color-light: rgb(131, 190, 85);    
 }
 
 body{
     background-color: var(--primary-color);       
+}
+
+@media (max-width: 768px){
+    h1 {
+        font-size: 12px;
+      }
+      
+      h2 {
+        font-size: 10px;
+      }
+      
+      h3 {
+        font-size: 9px;
+      }
+      
+      h4 {
+        font-size: 8px;
+      }
+      
+      h5 {
+        font-size: 7px;
+      }
+      
+      h6 {
+        font-size: 6px;
+      }
+      
+      p {
+        font-size: 7px;
+      }
+      
+      li{
+        font-size: 7px;
+      }
 }
 
 /* --------------------- Navigation Bar start --------------------- */
@@ -123,6 +157,15 @@ footer{
     border: 3px solid var(--extra-color-light);
     transform: scale(1.02);
 }
+.project-card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.goto-project{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 .project-card h1{
     color: var(--secondary-text-color);
     display: flex;
@@ -135,11 +178,11 @@ footer{
     color: var(--extra-color-light);
 }
 .project-card i{
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.project-card i:hover{
-    color: var(--primary-text-color);
+.project-card i:hover{    
+    color: var(--extra-color-light);
     transform: scale(1.2);
 }
 .project-card .hidden-content{
@@ -203,10 +246,10 @@ footer{
     color: var(--extra-color-light);
 }
 .job-card i{
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.job-card i:hover{
-    color: var(--primary-text-color);
+.job-card i:hover{    
     transform: scale(1.2);
 }
 .job-card .hidden-content{
@@ -272,10 +315,10 @@ footer{
     color: var(--extra-color-light);
 }
 .education-card i{
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.education-card i:hover{
-    color: var(--primary-text-color);
+.education-card i:hover{    
     transform: scale(1.2);
 }
 .education-card .hidden-content{
