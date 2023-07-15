@@ -11,11 +11,70 @@
     --primary-text-color: rgb(221, 231, 228);
     --secondary-text-color: rgb(120, 136, 118);
     --extra-color-dark: rgb(92, 128, 64);
-    --extra-color-light: rgb(131, 190, 85);
+    --extra-color-light: rgb(131, 190, 85);    
 }
 
 body{
+    display: flex;
     background-color: var(--primary-color);       
+}
+
+@media (max-width: 768px){
+    h1 {
+        font-size: 12px;
+      }
+      
+      h2 {
+        font-size: 10px;
+      }
+      
+      h3 {
+        font-size: 9px;
+      }
+      
+      h4 {
+        font-size: 8px;
+      }
+      
+      h5 {
+        font-size: 7px;
+      }
+      
+      h6 {
+        font-size: 6px;
+      }
+      
+      p {
+        font-size: 7px;
+      }
+      
+      li{
+        font-size: 7px;
+      }
+      nav{                        
+        padding-right: 1rem;
+        opacity: 80%;
+        width: auto;
+        height: 100vh;                         
+        border-right: 2px solid var(--extra-color-dark);        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1rem; 
+        position: fixed;
+        z-index: 2;    
+        transform: translateX(-87%);    
+    }
+    .pages{        
+        display: flex;
+        flex-direction: column;        
+        align-items: center;    
+        gap: 1rem;                   
+    }
+    main{
+        margin-top: 1rem;
+    }
 }
 
 /* --------------------- Navigation Bar start --------------------- */
@@ -28,22 +87,17 @@ nav{
     border-bottom: 2px solid var(--extra-color-dark);
     border-bottom-right-radius: 30%;
     display: flex;
-    justify-content: center;
-    align-items: center;   
+    justify-content: center;    
     gap: 1.5rem; 
     position: fixed;
-    z-index: 2;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    z-index: 2;    
 }
 nav:hover{
     opacity: 100%;
     border-bottom: 2px solid var(--extra-color-light);
 }
 .pages{        
-    padding-top: 1rem;
-    padding-left: 10rem;
-    padding-right: 1rem;
+    padding-top: 1rem;    
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -123,6 +177,15 @@ footer{
     border: 3px solid var(--extra-color-light);
     transform: scale(1.02);
 }
+.project-card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.goto-project{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 .project-card h1{
     color: var(--secondary-text-color);
     display: flex;
@@ -135,11 +198,11 @@ footer{
     color: var(--extra-color-light);
 }
 .project-card i{
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.project-card i:hover{
-    color: var(--primary-text-color);
+.project-card i:hover{    
+    color: var(--extra-color-light);
     transform: scale(1.2);
 }
 .project-card .hidden-content{
@@ -203,10 +266,10 @@ footer{
     color: var(--extra-color-light);
 }
 .job-card i{
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.job-card i:hover{
-    color: var(--primary-text-color);
+.job-card i:hover{    
     transform: scale(1.2);
 }
 .job-card .hidden-content{
@@ -272,10 +335,10 @@ footer{
     color: var(--extra-color-light);
 }
 .education-card i{
+    color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
-.education-card i:hover{
-    color: var(--primary-text-color);
+.education-card i:hover{    
     transform: scale(1.2);
 }
 .education-card .hidden-content{
