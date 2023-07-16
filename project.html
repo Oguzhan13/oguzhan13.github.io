@@ -9,171 +9,395 @@
     <!-- reference icons: -->       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-</head>
 <body>
     <header>
-        <nav>            
+        <nav>
+            <div class="sidebar-icon">
+                <i class="fa-solid fa-list fa-2xl"></i>
+            </div>
+            <div class="logo">
+                <img src="images/navbar/ying-yang.webp" alt="Logo">                
+                
+            </div>
             <div class="pages">
                 <a href="index.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-globe fa-2xl"></i>
-                        <h3>Home</h3>                       
+                        <h3 class="english-content">Home</h3>                       
+                        <h3 class="turkish-content">Anasayfa</h3> 
                     </div>
                 </a>
                 <a href="project.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-folder-open fa-2xl"></i>
-                        <h3>Projects</h3>
+                        <h3 class="english-content">Projects</h3>
+                        <h3 class="turkish-content">Projeler</h3>
                     </div>
                 </a>
                 <a href="skill.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-star fa-2xl"></i>
-                        <h3>Skills</h3>
+                        <h3 class="english-content">Skills</h3>
+                        <h3 class="turkish-content">Yetenekler</h3>
                     </div>
                 </a>
                 <a href="job.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-school fa-2xl"></i>
-                        <h3>Jobs</h3>
+                        <h3 class="english-content">Jobs</h3>
+                        <h3 class="turkish-content">Kariyer</h3>
                     </div>
                 </a>
                 <a href="education.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-graduation-cap fa-2xl"></i>
-                        <h3>Educations</h3>
+                        <h3 class="english-content">Educations</h3>
+                        <h3 class="turkish-content">Eğitimler</h3>
                     </div>
                 </a>
-                <a href="contact-info.html">
+                <a href="contact.html">
                     <div class="pages-item">
                         <i class="fa-solid fa-address-card fa-2xl"></i>
-                        <h3>Contact</h3>
+                        <h3 class="english-content">Contact</h3>
+                        <h3 class="turkish-content">İletişim</h3>
                     </div>
                 </a>                
-            </div>           
+            </div> 
+            <div class="optional-icon">
+                <img class="english-flag" src="images/navbar/united-kingdom.png" alt="English">
+                <img class="turkish-flag" src="images/navbar/turkey.png" alt="Turkish">                                
+                <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+            </div>            
         </nav>        
     </header>
-    <main>
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>exarion nextjs project</h1>
-                    <a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                
-                <i class="fa-solid fa-eye"></i>
+    <div class="container">
+        <aside>
+            <div class="pages">
+                <a href="index.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-globe fa-2xl"></i>
+                        <h3 class="english-content">Home</h3>                       
+                        <h3 class="turkish-content">Anasayfa</h3> 
+                    </div>
+                </a>
+                <a href="project.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-folder-open fa-2xl"></i>
+                        <h3 class="english-content">Projects</h3>
+                        <h3 class="turkish-content">Projeler</h3>
+                    </div>
+                </a>
+                <a href="skill.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-star fa-2xl"></i>
+                        <h3 class="english-content">Skills</h3>
+                        <h3 class="turkish-content">Yetenekler</h3>
+                    </div>
+                </a>
+                <a href="job.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-school fa-2xl"></i>
+                        <h3 class="english-content">Jobs</h3>
+                        <h3 class="turkish-content">Kariyer</h3>
+                    </div>
+                </a>
+                <a href="education.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+                        <h3 class="english-content">Educations</h3>
+                        <h3 class="turkish-content">Eğitimler</h3>
+                    </div>
+                </a>
+                <a href="contact.html">
+                    <div class="pages-item">
+                        <i class="fa-solid fa-address-card fa-2xl"></i>
+                        <h3 class="english-content">Contact</h3>
+                        <h3 class="turkish-content">İletişim</h3>
+                    </div>
+                </a>                
+            </div>   
+        </aside>
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>Exarion NextJS Project</h1>
+                        <a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>                    
+                    </div>                
+                    <i class="fa-solid fa-eye"></i>
+                </div>   
+                <div class="hidden-content">                
+                    <ul class="english-content">                               
+                        <li>SSR (Server-side rendering) of the initial page load.</li>
+                        <li>A web application where we can view the list of Github users or any specific user with their profile information</li>
+                        <li>Technologies: ReactJS, NextJS, NodeJS</li>
+                        <li><a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>İlk sayfa yükleme tarafında SSR (Sunucu tarafı oluşturma) işlemi.</li>
+                        <li>Github kullanıcılarının listesini veya belirli bir kullanıcıyı profil bilgileriyle görüntüleyebileceğimiz bir web uygulaması</li>
+                        <li>Teknolojiler: ReactJS, NextJS, NodeJS</li>
+                        <li><a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>                    
             </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>SSR (Server-side rendering) of the initial page load.</li>
-                <li>A web application where we can view the list of Github users or any specific user with their profile information</li>
-                <li>Technologies: ReactJS, NextJS, NodeJS</li>
-                <li><a href="https://github.com/Oguzhan13/exarion-nextjs-project" target="blank">Go to github</a></li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>KonfidesCase</h1>
-                    <a href="https://github.com/Oguzhan13/KonfidesCase" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                 
-                <i class="fa-solid fa-eye"></i>
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>Konfides Case</h1>
+                        <a href="https://github.com/Oguzhan13/KonfidesCase" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
+                    </div>                 
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">                
+                    <ul class="english-content">
+                        <li>N-Tier Architecture design pattern used.</li>
+                        <li>The project is divided into Authentication, DAL, BLL, DTO, Entity, API and UI (User Interface) layers.</li>
+                        <li>Used role based (Admin, User) MVC Project for UI .</li>
+                        <li>MVC project is divided into Areas, BusinessLogic, Controllers,  wwwroot, Models, ViewModels and Views folders.</li>
+                        <li>HttpClientFactory is used in MVC project to communicate with API project.</li>
+                        <li>Technologies: ASP .NET Core, EntityFramework Core, Newtonsoft</li>
+                        <li><a href="https://github.com/Oguzhan13/KonfidesCase" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>N-Katmanlı Mimari tasarım deseni kullanıldı.</li>
+                        <li>Proje Authentication, DAL, BLL, DTO, Entity, API ve UI (Kullanıcı Arayüzü) katmanlarına ayrılmıştır.</li>
+                        <li>UI için rol tabanlı (Yönetici, Kullanıcı) MVC Projesi kullanıldı.</li>
+                        <li>MVC projesi Areas, BusinessLogic, Controllers, wwwroot, Models, ViewModels ve Views klasörlerine ayrılmıştır.</li>
+                        <li>MVC projede API projesiyle iletişim kurmak için HttpClientFactory kullanılmıştır.</li>
+                        <li>Teknolojiler: ASP .NET Core, EntityFramework Core, Newtonsoft</li>
+                        <li><a href="https://github.com/Oguzhan13/KonfidesCase" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>            
             </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>N-Tier Architecture design pattern used.</li>
-                <li>The project is divided into Authentication, DAL, BLL, DTO, Entity, API and UI (User Interface) layers.</li>
-                <li>Used role based (Admin, User) MVC Project for UI .</li>
-                <li>MVC project is divided into Areas, BusinessLogic, Controllers,  wwwroot, Models, ViewModels and Views folders.</li>
-                <li>HttpClientFactory is used in MVC project to communicate with API project.</li>
-                <li>Technologies: ASP .NET Core, EntityFramework Core, Newtonsoft</li>
-                <li><a href="https://github.com/Oguzhan13/KonfidesCase" target="blank">Go to github</a></li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>Ajax HttpClientApi</h1> 
-                    <a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                                 
-                <i class="fa-solid fa-eye"></i>
-            </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>Javascript functions (AJAX) were used for Http methods in the API project.</li>
-                <li>Technologies: ASP .NET Core, Newtonsoft</li>                
-                <li><a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank">Go to github</a></li>
-            </ul>
-        </div>  
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>NTier.UI MVC</h1>
-                    <a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                  
-                <i class="fa-solid fa-eye"></i>
-            </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>N-Tier Architecture design pattern used.</li>
-                <li>The project is divided into Core, Data Access, Business Logic and User Interface layers. </li>
-                <li>MVC (Model-View-Controller) technolog was used for the UI Layer.</li>
-                <li>Technologies: ASP .NET Core, EntityFramework Core</li>
-                <li><a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank">Go to github</a></li>
-            </ul>
-        </div>  
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>ASP.NETCore WebAPI WithJWT UsingBogus</h1>
-                    <a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                  
-                <i class="fa-solid fa-eye"></i>
-            </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>N-Tier Architecture design pattern used.</li>
-                <li>Jason Web Token and IdentityUser class are used for the authentication processes. </li>
-                <li>Technologies: ASP .NET Core, EntityFramework, EntityFramework Core, Bogus, JwtBearer</li>                
-                <li><a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank">Go to github</a></li>
-            </ul>
-        </div>  
-        <div class="project-card">
-            <div class="project-card-header">
-                <div class="goto-project">
-                    <h1>WebAPI Using WatchDog</h1>
-                    <a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
-                </div>                  
-                <i class="fa-solid fa-eye"></i>
-            </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>Signed in using WatchDog package.</li>
-                <li>Technologies: ASP .NET Core, MSSQL </li>                            
-                <li><a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank">Go to github</a></li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <div class="project-card-header">                 
-                <h1>BACampus App</h1>
-                <i class="fa-solid fa-eye"></i>
-            </div>
-            <ul class="hidden-content">
-                <hr/><br>
-                <li>With this application, users can view their profiles, registered training programs and information about training programs, and take actions on a role basis.</li>
-                <li>ASP .NET Core and Entity Framework Core technologies are used.</li>
-                <li>Code First approach is applied.</li>
-                <li>Scrum framework is adopted. Azure DevOps is used for scrum board and repo.</li>
-                <li>Cloud Database is used.</li>
-                <li>The project can be shown upon request.</li>                                            
-            </ul>
-        </div>                                         
-    </main>
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>Ajax Http Client Api</h1> 
+                        <a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
+                    </div>                                 
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">
+                    <ul class="english-content">
+                        <li>Javascript functions (AJAX) were used for Http methods in the API project.</li>
+                        <li>Technologies: ASP .NET Core, Newtonsoft</li>                
+                        <li><a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>API projesinde Http metotları için Javascript fonksiyonları (AJAX) kullanıldı.</li>
+                        <li>Teknolojiler: ASP .NET Core, Newtonsoft</li>
+                        <li><a href="https://github.com/Oguzhan13/Ajax_HttpClientApi" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>            
+            </div> 
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>N-Tier UI MVC</h1>
+                        <a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
+                    </div>                  
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">
+                    <ul class="english-content">
+                        <li>N-Tier Architecture design pattern used.</li>
+                        <li>The project is divided into Core, Data Access, Business Logic and User Interface layers.</li>
+                        <li>MVC (Model-View-Controller) technolog was used for the UI Layer.</li>
+                        <li>Technologies: ASP .NET Core, EntityFramework Core</li>
+                        <li><a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>N-Katmanlı Mimari tasarım deseni kullanıldı.</li>
+                        <li>Proje Core, Data Access, Business Logic ve User Interface katmanlarına ayrılmıştır.</li>
+                        <li>UI Katmanı için MVC (Model-View-Controller) teknolojisi kullanıldı.</li>
+                        <li>Teknolojiler: ASP .NET Core, EntityFramework Core</li>
+                        <li><a href="https://github.com/Oguzhan13/NTier.UI_MVC" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>        
+            </div>        
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>ASP.NET Core Web API With JWT Using Bogus</h1>
+                        <a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
+                    </div>                  
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">
+                    <ul class="english-content">
+                        <li>N-Tier Architecture design pattern used.</li>
+                        <li>Jason Web Token and IdentityUser class are used for the authentication processes. </li>
+                        <li>Technologies: ASP .NET Core, EntityFramework, EntityFramework Core, Bogus, JwtBearer</li>                
+                        <li><a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>N-Katmanlı Mimari tasarım deseni kullanıldı.</li>
+                        <li>Kimlik doğrulama süreçleri için Jason Web Token ve IdentityUser sınıfı kullanıldı.</li>
+                        <li>Teknolojiler: ASP .NET Core, EntityFramework, EntityFramework Core, Bogus, JwtBearer</li>                
+                        <li><a href="https://github.com/Oguzhan13/ASP.NETCoreWebAPI_WithJWT_UsingBogus" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>
+            </div>        
+            <div class="card">
+                <div class="card-header">
+                    <div class="goto-project">
+                        <h1>Web API Using WatchDog</h1>
+                        <a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank"><i class="fa-sharp fa-solid fa-person-walking-arrow-right fa-2xl"></i></a>
+                    </div>                  
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">
+                    <ul class="english-content">
+                        <li>Signed in using WatchDog package.</li>
+                        <li>Technologies: ASP .NET Core, MSSQL </li>                            
+                        <li><a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank">Go to github</a></li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>WatchDog paketi kullanılarak oturum açıldı.</li>
+                        <li>Teknolojiler: ASP .NET Core, MSSQL </li>                            
+                        <li><a href="https://github.com/Oguzhan13/WebAPI_Using_WatchDog" target="blank">Github'a git</a></li>
+                    </ul>
+                </div>
+            </div>        
+            <div class="card">
+                <div class="card-header">                 
+                    <h1>BACampus App</h1>
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="hidden-content">
+                    <ul class="english-content">
+                        <li>With this application, users can view their profiles, registered training programs and information about training programs, and take actions on a role basis.</li>
+                        <li>ASP .NET Core and Entity Framework Core technologies are used.</li>
+                        <li>Code First approach is applied.</li>
+                        <li>Scrum framework is adopted. Azure DevOps is used for scrum board and repo.</li>
+                        <li>Cloud Database is used.</li>
+                        <li>The project can be shown upon request.</li>
+                    </ul>
+                    <ul class="turkish-content">
+                        <li>Bu uygulama ile kullanıcılar, profillerini, kayıtlı eğitim programlarını ve eğitim programları hakkındaki bilgileri görüntüleyebilir ve rol bazlı işlemler yapabilirler.</li>
+                        <li>ASP .NET Core ve Entity Framework Core teknolojileri kullanılmıştır.</li>
+                        <li>Code First yaklaşımı uygulanmıştır.</li>
+                        <li>Scrum çerçevesi kullanılmıştır. Scrum board ve repo olarak Azure DevOps kullanılmıştır.</li>
+                        <li>Bulut veritabanı kullanılmıştır.</li>
+                        <li>Proje talep üzerine gösterilebilir.</li>
+                    </ul>
+                </div>    
+            </div>           
+        </main>
+    </div>    
     <footer>
-
-    </footer>
+        <h3 class="english-content"><a href="mailto:oguzhanbayram13@gmail.com">Contact Me!</a></h3>
+        <h3 class="turkish-content"><a href="mailto:oguzhanbayram13@gmail.com">İletişime Geç!</a></h3>
+    </footer>  
     <script>
-        const icons = document.querySelectorAll('.project-card i.fa-eye, .project-card i.fa-eye-slash');
-      
+        // Dil seçimi için DOM öğelerini seçme
+        const turkishFlag = document.querySelector('.turkish-flag');
+        const englishFlag = document.querySelector('.english-flag');
+        const turkishContent = document.querySelectorAll('.turkish-content');
+        const englishContent = document.querySelectorAll('.english-content');
+    
+        // Sayfa yüklendiğinde English içeriğini gösterme
+        window.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.setAttribute('lang', 'en');
+            turkishContent.forEach(element => {
+                element.style.display = 'none';
+            });
+            englishContent.forEach(element => {
+                element.style.display = 'flex';
+                element.style.flexDirection = 'column';  
+                element.style.gap = '1rem'; 
+            });
+        });
+    
+        // Türkçe dil seçeneği
+        turkishFlag.addEventListener('click', function() {
+            document.documentElement.setAttribute('lang', 'tr');
+            turkishContent.forEach(element => {
+                element.style.display = 'flex';
+                element.style.flexDirection = 'column'; 
+                element.style.gap = '1rem'; 
+            });
+            englishContent.forEach(element => {
+                element.style.display = 'none';
+            });
+        });
+    
+        // İngilizce dil seçeneği
+        englishFlag.addEventListener('click', function() {
+            document.documentElement.setAttribute('lang', 'en');
+            turkishContent.forEach(element => {
+                element.style.display = 'none';
+            });
+            englishContent.forEach(element => {
+                element.style.display = 'flex';
+                element.style.flexDirection = 'column';  
+                element.style.gap = '1rem'; 
+            });
+        });
+
+        const iconElement = document.querySelector('.fa-circle-half-stroke');
+        let isColorChanged = false;
+        iconElement.addEventListener('click', function() {
+            if (isColorChanged) {
+                // Eski renklere dön
+                document.documentElement.style.setProperty('--primary-color', 'rgb(7, 7, 7)');
+                document.documentElement.style.setProperty('--secondary-color', '#202020');
+                document.documentElement.style.setProperty('--primary-text-color', 'rgb(221, 231, 228)');
+                document.documentElement.style.setProperty('--secondary-text-color', 'rgb(120, 136, 118)');
+                document.documentElement.style.setProperty('--extra-color-dark', 'rgb(92, 128, 64)');
+                document.documentElement.style.setProperty('--extra-color-light', 'rgb(131, 190, 85)');
+                isColorChanged = false;
+            } else {
+                // Yeni renklere geç
+                const newPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-text-color');
+                const newSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-text-color');
+                const newPrimaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+                const newSecondaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+                const newExtraColorDark = getComputedStyle(document.documentElement).getPropertyValue('--extra-color-light');
+                const newExtraColorLight = getComputedStyle(document.documentElement).getPropertyValue('--extra-color-dark');
+
+                document.documentElement.style.setProperty('--primary-color', newPrimaryColor);
+                document.documentElement.style.setProperty('--secondary-color', newSecondaryColor);
+                document.documentElement.style.setProperty('--primary-text-color', newPrimaryTextColor);
+                document.documentElement.style.setProperty('--secondary-text-color', newSecondaryTextColor);
+                document.documentElement.style.setProperty('--extra-color-dark', newExtraColorDark);
+                document.documentElement.style.setProperty('--extra-color-light', newExtraColorLight);
+                isColorChanged = true;
+            }
+        });
+         
+        const sidebarElement = document.querySelector('.fa-solid.fa-list');
+        const aside = document.querySelector('aside');
+        aside.style.opacity = '80%';
+        aside.style.backgroundColor = 'var(--secondary-color)';
+        aside.style.border = '2px solid var(--extra-color-light)';
+        aside.style.borderRadius = '1rem';
+        aside.style.marginTop = '8rem';
+        aside.style.padding = '1rem';
+        aside.style.width = '10rem';
+        aside.style.position = 'fixed';
+        aside.style.display = 'none';
+        aside.style.justifyContent = 'center';
+        aside.style.alignItems = 'center';
+        aside.style.zIndex = '2';
+
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            if (!aside.contains(target) && target !== sidebarElement) {
+                aside.style.display = 'none';
+            }
+        });
+
+        sidebarElement.addEventListener('click', function() {
+            if (aside.style.display === 'none') {
+                aside.style.display = 'block';
+            } else {
+                aside.style.display = 'none';
+            }
+        });
+
+        const icons = document.querySelectorAll('.card i.fa-eye, .card i.fa-eye-slash');      
         icons.forEach(function(icon) {
           icon.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -183,7 +407,7 @@
             icon.classList.toggle('fa-eye-slash');
             icon.classList.toggle('fa-eye');
           });
-        });
-      </script>
+        });     
+    </script>
 </body>
 </html>
