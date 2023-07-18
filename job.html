@@ -287,37 +287,48 @@
         const turkishContent = document.querySelectorAll('.turkish-content');
         const englishContent = document.querySelectorAll('.english-content');            
         window.addEventListener('DOMContentLoaded', function() {
-            document.documentElement.setAttribute('lang', 'en');
-            turkishContent.forEach(element => {
-                element.style.display = 'none';
-            });
-            englishContent.forEach(element => {
-                element.style.display = 'flex';
-                element.style.flexDirection = 'column';  
-                element.style.gap = '1rem'; 
-            });
-        });            
-        turkishFlag.addEventListener('click', function() {
-            document.documentElement.setAttribute('lang', 'tr');
-            turkishContent.forEach(element => {
-                element.style.display = 'flex';
-                element.style.flexDirection = 'column'; 
-                element.style.gap = '1rem'; 
-            });
-            englishContent.forEach(element => {
-                element.style.display = 'none';
-            });
+            const storedLang = localStorage.getItem('lang');
+            const langAttribute = document.documentElement.getAttribute('lang');
+            if (storedLang) {
+                document.documentElement.setAttribute('lang', storedLang);
+            } else if (!langAttribute) {
+                document.documentElement.setAttribute('lang', 'en');
+            }
+            updateLanguageDisplay();
         });
-        englishFlag.addEventListener('click', function() {
+        function updateLanguageDisplay() {
+            const langAttribute = document.documentElement.getAttribute('lang');
+            const turkishContent = document.querySelectorAll('.turkish-content');
+            const englishContent = document.querySelectorAll('.english-content');
+            if (langAttribute === 'tr') {
+                turkishContent.forEach(element => {
+                    element.style.display = 'flex';
+                    element.style.flexDirection = 'column';
+                    element.style.gap = '1rem';
+                });
+                englishContent.forEach(element => {
+                    element.style.display = 'none';
+                });
+            } else {
+                turkishContent.forEach(element => {
+                    element.style.display = 'none';
+                });
+                englishContent.forEach(element => {
+                    element.style.display = 'flex';
+                    element.style.flexDirection = 'column';
+                    element.style.gap = '1rem';
+                });
+            }
+        }
+        document.querySelector('.turkish-flag').addEventListener('click', function() {
+            document.documentElement.setAttribute('lang', 'tr');
+            updateLanguageDisplay();
+            localStorage.setItem('lang', 'tr');
+        });
+        document.querySelector('.english-flag').addEventListener('click', function() {
             document.documentElement.setAttribute('lang', 'en');
-            turkishContent.forEach(element => {
-                element.style.display = 'none';
-            });
-            englishContent.forEach(element => {
-                element.style.display = 'flex';
-                element.style.flexDirection = 'column';  
-                element.style.gap = '1rem'; 
-            });
+            updateLanguageDisplay();
+            localStorage.setItem('lang', 'en');
         });
 
         const defaultColorPaletteDark = {
