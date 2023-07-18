@@ -172,6 +172,12 @@ aside{
     display: flex;
     justify-content: space-between;
 }
+.card-header img{
+    border: 2px solid var(--extra-color-dark);
+    border-radius: 1rem;
+    max-width: 10rem;
+    max-height: 5rem;
+}
 .goto-project{
     display: flex;
     align-items: center;
@@ -310,7 +316,15 @@ aside{
         width: 100%;   
         border: 2px solid var(--extra-color-light); 
     }
-
+    
+    .mail-form{            
+        border: 2px solid var(--extra-color-light);         
+    }
+    .mail-form form div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
   
 /* --------------------------------------------------------------------------------------------- */
@@ -360,5 +374,9 @@ aside{
         width: 100%;         
         border: 2px solid var(--extra-color-light);   
     }    
+
+    .mail-form{            
+        border: 2px solid var(--extra-color-light);         
+    }
 }
   
