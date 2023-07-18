@@ -316,7 +316,15 @@ aside{
         width: 100%;   
         border: 2px solid var(--extra-color-light); 
     }
-
+    
+    .mail-form{            
+        border: 2px solid var(--extra-color-light);         
+    }
+    .mail-form form div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
   
 /* --------------------------------------------------------------------------------------------- */
@@ -366,5 +374,9 @@ aside{
         width: 100%;         
         border: 2px solid var(--extra-color-light);   
     }    
+
+    .mail-form{            
+        border: 2px solid var(--extra-color-light);         
+    }
 }
   

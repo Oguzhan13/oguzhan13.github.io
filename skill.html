@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- reference documents: -->
+    <title>Home</title>    
     <link rel="stylesheet" href="style.css">
-    <!-- reference icons: -->       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -66,7 +64,7 @@
             <div class="optional-icon">
                 <img class="english-flag" src="images/navbar/united-kingdom.png" alt="English">
                 <img class="turkish-flag" src="images/navbar/turkey.png" alt="Turkish">                                
-                <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+                <i class="fa-regular fa-circle fa-xl" onclick="toggleIconColor(this)"></i>
             </div>            
         </nav>        
     </header>
@@ -118,21 +116,18 @@
             </div>   
         </aside>
         <main>
-
+                       
         </main>
-    </div>
+    </div>    
     <footer>
         <h3 class="english-content"><a href="mailto:oguzhanbayram13@gmail.com">Contact Me!</a></h3>
         <h3 class="turkish-content"><a href="mailto:oguzhanbayram13@gmail.com">İletişime Geç!</a></h3>
     </footer>  
-    <script>
-        // Dil seçimi için DOM öğelerini seçme
+    <script>        
         const turkishFlag = document.querySelector('.turkish-flag');
         const englishFlag = document.querySelector('.english-flag');
         const turkishContent = document.querySelectorAll('.turkish-content');
-        const englishContent = document.querySelectorAll('.english-content');
-    
-        // Sayfa yüklendiğinde English içeriğini gösterme
+        const englishContent = document.querySelectorAll('.english-content');            
         window.addEventListener('DOMContentLoaded', function() {
             document.documentElement.setAttribute('lang', 'en');
             turkishContent.forEach(element => {
@@ -143,9 +138,7 @@
                 element.style.flexDirection = 'column';  
                 element.style.gap = '1rem'; 
             });
-        });
-    
-        // Türkçe dil seçeneği
+        });            
         turkishFlag.addEventListener('click', function() {
             document.documentElement.setAttribute('lang', 'tr');
             turkishContent.forEach(element => {
@@ -157,8 +150,6 @@
                 element.style.display = 'none';
             });
         });
-    
-        // İngilizce dil seçeneği
         englishFlag.addEventListener('click', function() {
             document.documentElement.setAttribute('lang', 'en');
             turkishContent.forEach(element => {
@@ -170,37 +161,74 @@
                 element.style.gap = '1rem'; 
             });
         });
-        const iconElement = document.querySelector('.fa-circle-half-stroke');
-        let isColorChanged = false;
-        iconElement.addEventListener('click', function() {
-            if (isColorChanged) {
-                // Eski renklere dön
-                document.documentElement.style.setProperty('--primary-color', 'rgb(7, 7, 7)');
-                document.documentElement.style.setProperty('--secondary-color', '#202020');
-                document.documentElement.style.setProperty('--primary-text-color', 'rgb(221, 231, 228)');
-                document.documentElement.style.setProperty('--secondary-text-color', 'rgb(120, 136, 118)');
-                document.documentElement.style.setProperty('--extra-color-dark', 'rgb(92, 128, 64)');
-                document.documentElement.style.setProperty('--extra-color-light', 'rgb(131, 190, 85)');
-                isColorChanged = false;
-            } else {
-                // Yeni renklere geç
-                const newPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-text-color');
-                const newSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-text-color');
-                const newPrimaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
-                const newSecondaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
-                const newExtraColorDark = getComputedStyle(document.documentElement).getPropertyValue('--extra-color-light');
-                const newExtraColorLight = getComputedStyle(document.documentElement).getPropertyValue('--extra-color-dark');
 
-                document.documentElement.style.setProperty('--primary-color', newPrimaryColor);
-                document.documentElement.style.setProperty('--secondary-color', newSecondaryColor);
-                document.documentElement.style.setProperty('--primary-text-color', newPrimaryTextColor);
-                document.documentElement.style.setProperty('--secondary-text-color', newSecondaryTextColor);
-                document.documentElement.style.setProperty('--extra-color-dark', newExtraColorDark);
-                document.documentElement.style.setProperty('--extra-color-light', newExtraColorLight);
-                isColorChanged = true;
+        const defaultColorPaletteDark = {
+            '--primary-color': 'rgb(7, 7, 7)',
+            '--secondary-color': '#202020',
+            '--primary-text-color': 'rgb(221, 231, 228)',
+            '--secondary-text-color': 'rgb(120, 136, 118)',
+            '--extra-color-dark': 'rgb(92, 128, 64)',
+            '--extra-color-light': 'rgb(131, 190, 85)',
+        };
+        const defaultColorPaletteLight = {
+            '--primary-color':  'rgb(120, 136, 118)',
+            '--secondary-color':'rgb(221, 231, 228)',
+            '--primary-text-color': 'rgb(7, 7, 7)',
+            '--secondary-text-color': '#202020',
+            '--extra-color-dark': 'rgb(131, 190, 85)',
+            '--extra-color-light': 'rgb(92, 128, 64)',
+        };
+        function toggleIconColor(icon) {            
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');            
+            if (icon.classList.contains('fa-regular')) {                
+                applyColorPalette(defaultColorPaletteDark);                
+                localStorage.setItem('theme', 'dark');                
+                localStorage.setItem('iconState', 'fa-regular');
+            } else if (icon.classList.contains('fa-solid')) {                
+                applyColorPalette(defaultColorPaletteLight);                
+                localStorage.setItem('theme', 'light');                
+                localStorage.setItem('iconState', 'fa-solid');
             }
-        });
-
+        }
+        function applyColorPalette(colorPalette) {            
+            const head = document.querySelector('head');
+            let styleElement = document.getElementById('colorPaletteStyle');
+            if (!styleElement) {                
+                styleElement = document.createElement('style');
+                styleElement.id = 'colorPaletteStyle';
+                head.appendChild(styleElement);
+            }            
+            styleElement.innerHTML = '';            
+            let styleText = ':root {\n';
+            for (const [key, value] of Object.entries(colorPalette)) {
+                styleText += `  ${key}: ${value};\n`;
+            }
+            styleText += '}';
+            styleElement.appendChild(document.createTextNode(styleText));
+        }        
+        document.addEventListener('DOMContentLoaded', function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                applyColorPalette(defaultColorPaletteDark);                
+                document.querySelector('.fa-xl').classList.remove('fa-light');
+                document.querySelector('.fa-xl').classList.add('fa-solid');
+            } else if (theme === 'light') {
+                applyColorPalette(defaultColorPaletteLight);                
+                document.querySelector('.fa-xl').classList.remove('fa-solid');
+                document.querySelector('.fa-xl').classList.add('fa-light');
+            }
+            const iconState = localStorage.getItem('iconState');
+            const iconElement = document.querySelector('.fa-xl');
+            if (iconState === 'fa-regular') {
+                iconElement.classList.remove('fa-solid');
+                iconElement.classList.add('fa-regular');
+            } else if (iconState === 'fa-solid') {
+                iconElement.classList.remove('fa-regular');
+                iconElement.classList.add('fa-solid');
+            }
+        });  
+         
         const sidebarElement = document.querySelector('.fa-solid.fa-list');
         const aside = document.querySelector('aside');
         aside.style.opacity = '80%';
@@ -215,14 +243,12 @@
         aside.style.justifyContent = 'center';
         aside.style.alignItems = 'center';
         aside.style.zIndex = '2';
-
         document.addEventListener('click', function(e) {
             const target = e.target;
             if (!aside.contains(target) && target !== sidebarElement) {
                 aside.style.display = 'none';
             }
         });
-
         sidebarElement.addEventListener('click', function() {
             if (aside.style.display === 'none') {
                 aside.style.display = 'block';
@@ -230,6 +256,18 @@
                 aside.style.display = 'none';
             }
         });
+
+        const icons = document.querySelectorAll('.card i.fa-eye, .card i.fa-eye-slash');      
+        icons.forEach(function(icon) {
+          icon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const hiddenContent = icon.parentNode.nextElementSibling;
+            hiddenContent.style.display = hiddenContent.style.display === 'block' ? 'none' : 'block';
+            
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+        });     
     </script>
 </body>
 </html>
