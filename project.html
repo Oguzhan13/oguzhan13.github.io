@@ -15,8 +15,9 @@
             <div class="sidebar-icon">
                 <i class="fa-solid fa-list fa-2xl"></i>
             </div>
-            <div>
-
+            <div class="logo">
+                <img src="images/navbar/ying-yang.webp" alt="Logo">                
+                
             </div>
             <div class="pages">
                 <a href="index.html">
@@ -65,7 +66,7 @@
             <div class="optional-icon">
                 <img class="english-flag" src="images/navbar/united-kingdom.png" alt="English">
                 <img class="turkish-flag" src="images/navbar/turkey.png" alt="Turkish">                                
-                <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+                <i class="fa-light fa-circle-half-stroke fa-xl"></i>
             </div>            
         </nav>        
     </header>
@@ -334,7 +335,7 @@
                 element.style.gap = '1rem'; 
             });
         });
-    
+
         const iconElement = document.querySelector('.fa-circle-half-stroke');
         let isColorChanged = false;
         iconElement.addEventListener('click', function() {
@@ -349,8 +350,8 @@
                 isColorChanged = false;
             } else {
                 // Yeni renklere geç
-                const newPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-text-color');
-                const newSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-text-color');
+                const newPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-text-color');
+                const newSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-text-color');
                 const newPrimaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
                 const newSecondaryTextColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
                 const newExtraColorDark = getComputedStyle(document.documentElement).getPropertyValue('--extra-color-light');
@@ -365,8 +366,38 @@
                 isColorChanged = true;
             }
         });
-        const icons = document.querySelectorAll('.card i.fa-eye, .card i.fa-eye-slash');
-      
+         
+        const sidebarElement = document.querySelector('.fa-solid.fa-list');
+        const aside = document.querySelector('aside');
+        aside.style.opacity = '80%';
+        aside.style.backgroundColor = 'var(--secondary-color)';
+        aside.style.border = '2px solid var(--extra-color-light)';
+        aside.style.borderRadius = '1rem';
+        aside.style.marginTop = '8rem';
+        aside.style.padding = '1rem';
+        aside.style.width = '10rem';
+        aside.style.position = 'fixed';
+        aside.style.display = 'none';
+        aside.style.justifyContent = 'center';
+        aside.style.alignItems = 'center';
+        aside.style.zIndex = '2';
+
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            if (!aside.contains(target) && target !== sidebarElement) {
+                aside.style.display = 'none';
+            }
+        });
+
+        sidebarElement.addEventListener('click', function() {
+            if (aside.style.display === 'none') {
+                aside.style.display = 'block';
+            } else {
+                aside.style.display = 'none';
+            }
+        });
+
+        const icons = document.querySelectorAll('.card i.fa-eye, .card i.fa-eye-slash');      
         icons.forEach(function(icon) {
           icon.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -376,8 +407,7 @@
             icon.classList.toggle('fa-eye-slash');
             icon.classList.toggle('fa-eye');
           });
-        });
-      </script>
+        });     
     </script>
 </body>
 </html>
