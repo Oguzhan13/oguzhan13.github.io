@@ -1,0 +1,42 @@
+#home {    
+    color: var(--light-text-color);
+    background-image: url('../img/home-section.jpg'); /* Arka plan resminin yolunu belirtin */
+    background-size: cover;
+    background-position: center;    
+    box-shadow: 0 0 8px 1px var(--navbar-color);
+    width: auto;
+    height: 100vh;
+    font-size: xx-large;
+    z-index: -1;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+#typed-content {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative; /* Add this to create a relative positioning context */
+    color: var(--light-text-color); /* Set the initial color to white */
+}
+
+#typed-content::after {
+    content: ''; /* Create an after pseudo-element */
+    display: inline-block;
+    width: 6px; /* Adjust the width of the cursor */
+    height: 1.1em; /* Adjust the height of the cursor */
+    background-color: var(--light-text-color); /* Set the color of the cursor */
+    margin-left: 2px; /* Adjust the distance between the cursor and text */
+    animation: blink-animation 1s infinite; /* Apply the blinking animation */
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 0; /* Hide the cursor */
+    }
+    50% {
+        opacity: 1; /* Show the cursor */
+    }
+}

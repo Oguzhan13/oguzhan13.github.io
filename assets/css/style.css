@@ -1,0 +1,29 @@
+/* --------------------------------------------------------------------------------------------- */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --navbar-background-color: #000000;
+    --navbar-color: #ffffff;
+    --dark-color: #131313;
+    --dark-text-color: #272727;    
+    --light-text-color: #ffffff;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Helvetica', sans-serif;
+}
+
+header{
+    background-color: var(--navbar-color);
+}
+
+.section-content {
+    margin-top: 5rem;;
+}
+
