@@ -1,18 +1,19 @@
-#jobs {
+#career {
     margin: 1rem;
     display: flex;    
     justify-content: space-between;
     gap: 1rem;
 }
-#jobs-img {    
+#career-img {    
     color: var(--dark-text-color-color);
-    background-image: url('../img/home-section.jpg'); /* Arka plan resminin yolunu belirtin */
+    background-image: url('../img/career-section.png'); /* Arka plan resminin yolunu belirtin */
     background-size: cover;
     background-position: left-center;
     box-shadow: 0 0 8px 4px var(--dark-text-color);    
     border-radius: 1rem;
+    margin-top: 4.3rem;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
     font-size: xx-large;    
     overflow-y: hidden;
 }

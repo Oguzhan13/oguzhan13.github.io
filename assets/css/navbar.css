@@ -9,13 +9,58 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+nav a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .sections{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem;        
 }
-.sections a{
-    color: var(--text-color);
-    text-decoration: none;
+/* .sections a {    
+    transition: border-bottom 1s ease-in-out;    
+}
+.sections a.clicked {
+    border-bottom: 0.3rem solid var(--navbar-color);    
+}
+.sections a:hover {
+    border-bottom: 0.3rem solid var(--navbar-color);
+    animation: borderAnimation 1s ease-in-out both;
+} */
+
+@keyframes borderAnimation {
+    from {
+        width: 7%;
+    }
+    to {
+        width: 8%;
+    }
+}
+.language-content {
+    width: 12rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.language-options {
+    display: none;
+}
+.language-option {
+    cursor: pointer;
+    background-color: var(--navbar-color);
+    margin : 0.5rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    border-radius: 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+.language-option:hover {
+    background-color: var(--blue-color);
+    transform: scale(1.1);
+}
+.show-language-options {
+    display: flex;
 }

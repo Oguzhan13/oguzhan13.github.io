@@ -1,4 +1,4 @@
-function typingAnimation(elementId, typeItems) {
+function titleTextAnimation(elementId, typeItems) {
     const typedElement = document.getElementById(elementId);
     const typedItems = typedElement.getAttribute(typeItems).split(',').map(item => item.trim());
     let currentItemIndex = 0;
