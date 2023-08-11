@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- imported CSS files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about-me.css">
+    <link rel="stylesheet" href="../css/skills.css">
+    <link rel="stylesheet" href="../css/css/projects.css">
+    <link rel="stylesheet" href="../css/educations.css">
+    <link rel="stylesheet" href="../css/css/career.css">
+    <link rel="stylesheet" href="../css/contact-me.css">
+    <!-- imported JS files -->   
+    <script src="../js/titleAnimation.js"></script> 
+    <script src="../js/toggleLanguageMenu.js"></script>
+    <script src="../js/handleLanguageOptions.js"></script>
+    <script src="../js/changeNavLinkBorderStyle.js"></script>
+</head>
+<body>
+    <header>
+        <nav>                             
+            <div class="nav-logo">
+                <a href="#home" id="go-home">
+                    <h3>Oğuzhan Bayram</h3>
+                </a>  
+            </div>
+            <ul class="nav-page-sections">
+                <li>
+                    <a href="#about-me" id="go-about-me" class="nav-section" onclick="changeNavLinkBorderStyle('about-me-border')">                                                             
+                        <h3>About Me</h3>                                               
+                        <div id="about-me-border" class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" id="go-skills" class="nav-section" onclick="changeNavLinkBorderStyle('skills-border')">
+                        <h3>Skills</h3>                                                
+                        <div id="skills-border" class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" id="go-projects" class="nav-section"  onclick="changeNavLinkBorderStyle('projects-border')">
+                        <h3>Projects</h3>                        
+                        <div id="projects-border" class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#educations" id="go-educations" class="nav-section"  onclick="changeNavLinkBorderStyle('educations-border')">
+                        <h3>Educations</h3>                                     
+                        <div id="educations-border" class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#career" id="go-career" class="nav-section"  onclick="changeNavLinkBorderStyle('career-border')">
+                        <h3>Career</h3>                        
+                        <div id="career-border" class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-me" id="go-contact-me" class="nav-section"  onclick="changeNavLinkBorderStyle('contact-me-border')">
+                        <h3>Contact</h3>                        
+                        <div id="contact-me-border" class="nav-border"></div>
+                    </a>
+                </li>
+            </ul>
+            <div id="language-toggle" class="nav-lang">
+                <h3 id="language-en">Language</h3>                
+                <ul id="language-options" class="language-options">
+                    <li><button class="language-option" data-lang="en">EN</button></li>
+                    <li><button class="language-option" data-lang="tr">TR</button></li>
+                </ul>
+            </div>
+        </nav>        
+    </header>
+    <main>
+        <section id="home">
+            <h1>Home</h1>            
+        </section>
+        <section id="about-me">
+            <h1>About Me</h1>            
+        </section>        
+        <section id="skills">
+            <h1>Skills</h1>            
+        </section>        
+        <section id="projects">
+            <h1>Projects</h1>                        
+        </section>        
+        <section id="educations">
+            <h1>Educations</h1>            
+        </section>        
+        <section id="career">
+            <h1>Career</h1>                        
+        </section>        
+        <section id="contact-me">
+            <h1>Contact</h1>                        
+        </section>
+    </main>    
+    <script>
+        toggleLanguageMenu('nav-lang', 'language-options');
+        handleLanguageOptions("data-lang", "language-option", "../html/portfolio-tr.html");    
+        changeNavLinkBorderStyle(borderId);
+        
+    </script>
+</body>
+</html>

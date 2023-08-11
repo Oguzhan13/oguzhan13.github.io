@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioTR</title>
+    <!-- imported CSS files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about-me.css">
+    <link rel="stylesheet" href="../css/skills.css">
+    <link rel="stylesheet" href="../css/css/projects.css">
+    <link rel="stylesheet" href="../css/educations.css">
+    <link rel="stylesheet" href="../css/css/career.css">
+    <link rel="stylesheet" href="../css/contact-me.css">
+    <!-- imported JS files -->   
+    <script src="../js/titleAnimation.js"></script> 
+    <script src="../js/toggleLanguageMenu.js"></script>
+    <script src="../js/handleLanguageOptions.js"></script>
+</head>
+<body>
+    <header>
+        <nav>                             
+            <div class="nav-logo">
+                <a href="#home" id="go-home">
+                    <h3>Oğuzhan Bayram</h3>
+                </a>  
+            </div>
+            <ul class="nav-page-sections">
+                <li>
+                    <a href="#about-me" id="go-about-me" class="nav-section">                                                             
+                        <h3>Hakkımda</h3>                                               
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" id="go-skills" class="nav-section">
+                        <h3>Yetenekler</h3>                                                
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" id="go-projects" class="nav-section">
+                        <h3>Projeler</h3>                        
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#educations" id="go-educations" class="nav-section">
+                        <h3>Eğitimler</h3>                                     
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#career" id="go-career" class="nav-section">
+                        <h3>Kariyer</h3>                        
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-me" id="go-contact-me" class="nav-section">
+                        <h3>İletişim</h3>                        
+                        <div class="nav-border"></div>
+                    </a>
+                </li>
+            </ul>
+            <div id="language-toggle" class="nav-lang">
+                <h3 id="language-en">Dil</h3>                
+                <ul id="language-options" class="language-options">
+                    <li><button class="language-option" data-lang="en">EN</button></li>
+                    <li><button class="language-option" data-lang="tr">TR</button></li>
+                </ul>
+            </div>
+        </nav>        
+    </header>
+    <main>
+        <section id="home">
+            <h1>Home</h1>            
+        </section>
+        <section id="about-me">
+            <h1>Hakkımda</h1>            
+        </section>        
+        <section id="skills">
+            <h1>Yetenekler</h1>            
+        </section>        
+        <section id="projects">
+            <h1>Projeler</h1>                        
+        </section>        
+        <section id="educations">
+            <h1>Eğitimler</h1>            
+        </section>        
+        <section id="career">
+            <h1>Kariyer</h1>                        
+        </section>        
+        <section id="contact-me">
+            <h1>İletişim</h1>                        
+        </section>
+    </main>    
+    <script>
+        toggleLanguageMenu('nav-lang', 'language-options');
+        handleLanguageOptions("data-lang", "language-option", "../html/portfolio.html");
+    </script>
+</body>
+</html>

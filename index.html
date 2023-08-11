@@ -1,193 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>    
-    <link href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- imported CSS files -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/about-me.css">
-    <link rel="stylesheet" href="assets/css/skills.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/educations.css">
-    <link rel="stylesheet" href="assets/css/career.css">
-    <link rel="stylesheet" href="assets/css/contact-me.css">
-    <!-- imported JS files -->
-    <script src="assets/js/titleTextAnimation.js"></script>
-    <script src="assets/js/toggleLanguageOptions.js"></script>    
-    <script src="assets/js/toggleLanguage.js"></script>    
-    <script src="assets/js/toggleHiddenContent.js"></script>
+    <title>Index</title>        
 </head>
-<body>
-    <header>
-        <nav>       
-            <a href="#home">
-                <h3>Oğuzhan Bayram</h3>
-            </a>               
-            <div class="sections">                
-                <a href="#about-me">                                                             
-                    <h3 class="english-content">About Me</h3>                       
-                    <h3 class="turkish-content">Hakkımda</h3> 
-                    <div class="nav-border"></div>
-                </a>
-                <a href="#skills">
-                    <h3 class="english-content">Skills</h3>
-                    <h3 class="turkish-content">Yetenekler</h3>                                             
-                    <div class="nav-border"></div>
-                </a>
-                <a href="#projects"">
-                    <h3 class="english-content">Projects</h3>
-                    <h3 class="turkish-content">Projeler</h3>                    
-                    <div class="nav-border"></div>
-                </a>
-                <a href="#educations">
-                    <h3 class="english-content">Educations</h3>
-                    <h3 class="turkish-content">Eğitimler</h3>                    
-                    <div class="nav-border"></div>
-                </a>
-                <a href="#career">
-                    <h3 class="english-content">Career</h3>
-                    <h3 class="turkish-content">Kariyer</h3>
-                    <div class="nav-border"></div>
-                </a>
-                <a href="#contact-me">
-                    <h3 class="english-content">Contact</h3>
-                    <h3 class="turkish-content">İletişim</h3>                    
-                    <div class="nav-border"></div>
-                </a>
-                <div class="language-content">                    
-                    <h3 class="english-content">Language</h3>
-                    <h3 class="turkish-content">Dil</h3>                    
-                    <div class="language-options">
-                        <button class="language-option" data-lang="en">EN</button>
-                        <button class="language-option" data-lang="tr">TR</button>
-                    </div>
-                </div>  
-            </div>             
-        </nav>        
-    </header>
-    <main>        
-        <section id="home" data-target="home">
-            <h1 class="english-content">I am Oğuzhan Bayram</h1>
-            <h1 class="turkish-content">Ben Oğuzhan Bayram</h1>
-            <h3 id="typed-content" class="typed" data-typed-items="Full Stack Developer, Bank-end Developer, .Net Developer, C# Developer"></h3>
-        </section>
-        <section id="about-me" data-target="about-me">
-            <div class="section-bg" id="about-me-img"></div>
-            <div class="section-content">
-                <h1>About Me</h1>
-                <div class="summary">
-                    <img class="profile-img" src="assets/img/summary-photo.png" alt="content-icon">
-                    <p id="summary" class="english-content">Fresh graduated of .NET Framework training programme at Bilge Adam Academy. Self-motivated and result-driven professional committed to pursuing a long-term career change into software engineering, especially full stack or backend development. A quick learner who can absorb new ideas and can communicate clearly and effectively.</p>
-                    <p id="summary" class="turkish-content">Bilge Adam Akademi .NET Framework eğitim programından yeni mezun oldum. Kendini motive eden ve sonuç odaklı bir profesyonel olarak, özellikle full stack veya backend geliştirme alanında uzun vadeli bir kariyer değişikliği yapma konusunda kararlıyım. Yeni fikirleri hızlıca öğrenen, açık ve etkili bir şekilde iletişim kurabilen bir öğrenciyim.</p>                   
-                    <div class="researched-topics">
-                        <h3 class="english-content">Researched topics</h3>
-                        <h3 class="turkish-content">Araştırılan konu başlıkları</h3>
-                        <img id="summary-down" class="content-icon" src="assets/img/icons/angle-down.svg" alt="content-icon">
-                        <img id="summary-up" class="content-icon" src="assets/img/icons/angle-up.svg" alt="content-icon">
-                    </div>                    
-                    <div id="summary-hidden-content" class="hidden-content">
-                        <ul class="researched-topic english-content">
-                            <li>SOLID principles</li>
-                            <li>Design patterns for software architecture</li>
-                            <li>N-Tier Architecture, Onion Architecture, Clean Architecture, Vertical Slice Architecture</li>
-                            <li>Authentication with JWT and refresh token</li>
-                            <li>Role-based authorization</li>
-                            <li>API entegration with React or ASP .NET Core MVC projects</li>
-                        </ul>
-                        <ul class="researched-topic turkish-content">
-                            <li>SOLID prensipleri</li>
-                            <li>Yazılım mimarisi için tasarım desenleri</li>
-                            <li>N-Katmanlı Mimari, Soğan Mimari, Temiz Mimari, Dikey Dilim Mimari</li>
-                            <li>JWT ve refresh token ile kimlik doğrulama işlemleri</li>
-                            <li>Rol tabanlı yetkilendirme işlemleri</li>
-                            <li>React veya ASP .NET Core MVC projeleri ile API entegrasyonu</li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>            
-        </section>        
-        <section id="skills" data-target="skills">
-            <div class="section-content">
-                <h1>Skills</h1>
-                 
-            </div>
-            <div class="section-bg" id="skills-img"></div>
-        </section>        
-        <section id="projects" data-target="projects">
-            <div class="section-bg" id="projects-img"></div>
-            <div class="section-content">
-                <h1>Projects</h1>
-            </div>
-        </section>
-        <section id="educations" data-target="educations">
-            <div class="section-content">
-                <h1>Educations</h1>
-            </div>
-            <div class="section-bg" id="educations-img"></div>
-        </section>
-        <section id="career" data-target="career">
-            <div class="section-bg" id="career-img"></div>
-            <div class="section-content">
-                <h1>Career</h1>
-            </div>
-        </section>
-        <section id="contact-me" data-target="contact-me">
-            <div class="section-content">
-                <h1>Contact Me</h1>
-            </div>
-            <div class="section-bg" id="contact-me-img"></div>
-        </section>
-    </main>    
-    <script>
-        // imorted typing-animation.js
-        titleTextAnimation('typed-content', 'data-typed-items');        
-        //imported toggleLanguageOptions.js
-        toggleLanguageOptions('language-content', 'language-options'); 
-        // imported toogleLanguage.js       
-        toggleLanguage(".language-option", "data-lang", ".english-content", ".turkish-content");   
-        //imported toggleHiddenContent        
-        toggleHiddenContent('summary-down', 'summary-up', 'summary-hidden-content');
-        toggleHiddenContent('skills-down', 'skills-up', 'skills-hidden-content');       
-        
-        // Tüm bölümleri seçin
-const sections = document.querySelectorAll('section');
+<body>        
+    <script>        
+         // Kullanıcının tarayıcı dilini al
+         var userLang = navigator.language || navigator.userLanguage;
 
-// Tüm bağlantıları seçin
-const navLinks = document.querySelectorAll('.sections a');
-
-// Sayfa yüklendiğinde veya bağlantıya tıklandığında çalışacak fonksiyon
-function handleNavigation() {
-  const currentSectionId = window.location.hash.slice(1); // '#home' -> 'home'
-  sections.forEach(section => {
-    const target = section.getAttribute('data-target');
-    if (target === currentSectionId) {
-      section.querySelector('.nav-border').style.width = '100%';
-    } else {
-      section.querySelector('.nav-border').style.width = '0';
-    }
-  });
-}
-
-// Sayfa yüklendiğinde ve bağlantıya tıklandığında çalışacak
-window.addEventListener('load', handleNavigation);
-navLinks.forEach(navLink => {
-  navLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Bağlantıya tıklamayı engelle
-    const targetSectionId = navLink.getAttribute('href').slice(1); // '#home' -> 'home'
-    window.location.hash = targetSectionId; // URL'deki ankeri değiştir
-    handleNavigation(); // Navigation stilini güncelle
-  });
-});
-
-        
-
-
-
+        // Eğer kullanıcının dili "tr" ise Türkçe sayfaya yönlendir
+        if (userLang === "tr" || userLang.startsWith("tr")) {
+            window.location.href = "assets/html/portfolio-tr.html";
+        }
+        else {
+            window.location.href = "assets/html/portfolio.html";
+        }
     </script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-/* --------------------------------------------------------------------------------------------- */
 /* CSS Reset */
 * {
     margin: 0;
@@ -30,37 +29,14 @@ main{
     
 }
 
+section {    
+    min-height: 100vh; /* Tam sayfa yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    transition: transform 0.5s ease-in-out; /* Animasyonlu geçiş */
+}
+
 .hidden-content {
     display: none;
-}
-
-.section-content {
-    margin-top: 5rem;
-    margin-left: 1rem;
-    width: 50%;    
-    font-size: large;    
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    gap: 1rem;
-}
-.section-content h1{
-    font-size: xx-large;
-    border-bottom: 0.4rem solid var(--blue-color);
-}
-.section-content p {    
-    text-align: justify;    
-}
-
-.content-icon {
-    cursor: pointer;
-    margin-left: 1rem;    
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-    border: 0.1rem solid var(--navbar-color);
-    border-radius: 0.3rem;
-    transition: 0.3s ease-in-out;
-}
-.content-icon:hover {    
-    transform: scale(1.3);
 }

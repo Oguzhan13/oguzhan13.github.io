@@ -1,33 +1,53 @@
 nav{
     opacity: 0.9;
     color: var(--navbar-color);
-    background-color: var(--navbar-background-color);
+    background-color: var(--navbar-background-color);    
     position: fixed;
     width: 100%;
-    height: 4rem;    
+    min-height: 4rem;    
     display: flex;    
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-nav a{
-    color: var(--text-color);
+
+.nav-logo{
+    margin-left: 2rem;
+}
+.nav-logo a{
+    color: var(--navbar-color);
     text-decoration: none;
 }
 
-.sections{
+.nav-page-sections {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 2rem;        
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-.nav-border {    
+.nav-page-sections li{
+    list-style: none;
+}
+
+.nav-section{
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+.nav-section:hover .nav-border{
+    border-bottom: 0.3rem solid var(--navbar-color);
+    animation: nav-section-animation 0.5s ease-in-out both;
+}
+.nav-section li{
+    list-style: none;
+}
+
+.nav-border{
+    border-bottom: none;
     transition: border-bottom 0.5s ease-in-out;    
 }
-.sections a:hover .nav-border {
-    border-bottom: 0.3rem solid var(--navbar-color);
-    animation: borderAnimation 0.5s ease-in-out both;
-}
-@keyframes borderAnimation {
+@keyframes nav-section-animation {
     from {
         width: 0;
     }
@@ -36,29 +56,37 @@ nav a{
     }
 }
 
-.language-content {    
-    width: 12rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;    
+.nav-lang{   
+    cursor: pointer; 
+    margin-right: 2rem;
+    min-width: 11rem;
+    display: flex;    
+    justify-content: flex-start;
+    align-items: center;
 }
-.language-options {
-    display: none;    
+
+.language-options{    
+    /* display: flex; */
+    display: none;
+    list-style: none;    
 }
-.language-option {
+
+.language-option{
     cursor: pointer;
     background-color: var(--navbar-color);
-    margin : 0.5rem;
-    padding: 0.5rem;
+    margin : 0.2rem;
+    padding: 0.2rem;
     font-weight: 900;
     border-radius: 0.3rem;
     transition: 0.3s ease-in-out;
 }
-.language-option:hover {
+.language-option:hover{
     color: var(--light-text-color);
     background-color: var(--blue-color);
     transform: scale(1.1);
 }
+
+/* This class is used in the 'toggleLanguageMenu.js' file. */
 .show-language-options {
     display: flex;
 }

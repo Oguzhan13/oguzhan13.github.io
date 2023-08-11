@@ -1,4 +1,4 @@
-function toggleLanguageOptions(languageContentClass, languageOptionsClass) {
+function toggleLanguageMenu(languageContentClass, languageOptionsClass) {
     const languageContents = document.querySelectorAll('.' + languageContentClass);
     const languageOptions = document.querySelectorAll('.' + languageOptionsClass);
 
