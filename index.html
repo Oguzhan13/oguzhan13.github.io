@@ -32,26 +32,32 @@
                 <a href="#about-me">                                                             
                     <h3 class="english-content">About Me</h3>                       
                     <h3 class="turkish-content">Hakkımda</h3> 
+                    <div class="nav-border"></div>
                 </a>
                 <a href="#skills">
                     <h3 class="english-content">Skills</h3>
                     <h3 class="turkish-content">Yetenekler</h3>                                             
+                    <div class="nav-border"></div>
                 </a>
                 <a href="#projects"">
                     <h3 class="english-content">Projects</h3>
                     <h3 class="turkish-content">Projeler</h3>                    
+                    <div class="nav-border"></div>
                 </a>
                 <a href="#educations">
                     <h3 class="english-content">Educations</h3>
                     <h3 class="turkish-content">Eğitimler</h3>                    
+                    <div class="nav-border"></div>
                 </a>
                 <a href="#career">
                     <h3 class="english-content">Career</h3>
                     <h3 class="turkish-content">Kariyer</h3>
+                    <div class="nav-border"></div>
                 </a>
                 <a href="#contact-me">
                     <h3 class="english-content">Contact</h3>
                     <h3 class="turkish-content">İletişim</h3>                    
+                    <div class="nav-border"></div>
                 </a>
                 <div class="language-content">                    
                     <h3 class="english-content">Language</h3>
@@ -65,12 +71,12 @@
         </nav>        
     </header>
     <main>        
-        <section id="home">
+        <section id="home" data-target="home">
             <h1 class="english-content">I am Oğuzhan Bayram</h1>
             <h1 class="turkish-content">Ben Oğuzhan Bayram</h1>
             <h3 id="typed-content" class="typed" data-typed-items="Full Stack Developer, Bank-end Developer, .Net Developer, C# Developer"></h3>
         </section>
-        <section id="about-me">
+        <section id="about-me" data-target="about-me">
             <div class="section-bg" id="about-me-img"></div>
             <div class="section-content">
                 <h1>About Me</h1>
@@ -105,32 +111,32 @@
                 </div>
             </div>            
         </section>        
-        <section id="skills">
+        <section id="skills" data-target="skills">
             <div class="section-content">
                 <h1>Skills</h1>
                  
             </div>
             <div class="section-bg" id="skills-img"></div>
         </section>        
-        <section id="projects">
+        <section id="projects" data-target="projects">
             <div class="section-bg" id="projects-img"></div>
             <div class="section-content">
                 <h1>Projects</h1>
             </div>
         </section>
-        <section id="educations">
+        <section id="educations" data-target="educations">
             <div class="section-content">
                 <h1>Educations</h1>
             </div>
             <div class="section-bg" id="educations-img"></div>
         </section>
-        <section id="career">
+        <section id="career" data-target="career">
             <div class="section-bg" id="career-img"></div>
             <div class="section-content">
                 <h1>Career</h1>
             </div>
         </section>
-        <section class=section id="contact-me">
+        <section id="contact-me" data-target="contact-me">
             <div class="section-content">
                 <h1>Contact Me</h1>
             </div>
@@ -148,6 +154,38 @@
         toggleHiddenContent('summary-down', 'summary-up', 'summary-hidden-content');
         toggleHiddenContent('skills-down', 'skills-up', 'skills-hidden-content');       
         
+        // Tüm bölümleri seçin
+const sections = document.querySelectorAll('section');
+
+// Tüm bağlantıları seçin
+const navLinks = document.querySelectorAll('.sections a');
+
+// Sayfa yüklendiğinde veya bağlantıya tıklandığında çalışacak fonksiyon
+function handleNavigation() {
+  const currentSectionId = window.location.hash.slice(1); // '#home' -> 'home'
+  sections.forEach(section => {
+    const target = section.getAttribute('data-target');
+    if (target === currentSectionId) {
+      section.querySelector('.nav-border').style.width = '100%';
+    } else {
+      section.querySelector('.nav-border').style.width = '0';
+    }
+  });
+}
+
+// Sayfa yüklendiğinde ve bağlantıya tıklandığında çalışacak
+window.addEventListener('load', handleNavigation);
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Bağlantıya tıklamayı engelle
+    const targetSectionId = navLink.getAttribute('href').slice(1); // '#home' -> 'home'
+    window.location.hash = targetSectionId; // URL'deki ankeri değiştir
+    handleNavigation(); // Navigation stilini güncelle
+  });
+});
+
+        
+
 
 
     </script>
