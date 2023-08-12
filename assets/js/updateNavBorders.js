@@ -12,7 +12,7 @@ function updateNavBorders() {
         if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
             const visiblePercentage = ((scrollPosition - sectionTop) / sectionHeight) * 100;
 
-            if (visiblePercentage >= 5) {
+            if (visiblePercentage >= 5 || section.getAttribute('id') === 'contact-me') {
                 const sectionId = section.getAttribute('id');
                 const navBorderId = `${sectionId}-border`;
 
@@ -29,5 +29,3 @@ function updateNavBorders() {
         }
     });
 }
-
-window.addEventListener('scroll', updateNavBorders);
