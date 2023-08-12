@@ -6,11 +6,9 @@
     <title>Index</title>        
 </head>
 <body>        
-    <script>        
-         // Kullanıcının tarayıcı dilini al
+    <script>                 
          var userLang = navigator.language || navigator.userLanguage;
-
-        // Eğer kullanıcının dili "tr" ise Türkçe sayfaya yönlendir
+        
         if (userLang === "tr" || userLang.startsWith("tr")) {
             window.location.href = "assets/html/portfolio-tr.html";
         }

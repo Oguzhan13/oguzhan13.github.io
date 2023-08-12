@@ -17,8 +17,8 @@ html{
     scroll-behavior: smooth;    
 }
 
-body{    
-    font-family: 'Helvetica', sans-serif;
+body{        
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 header{
@@ -30,11 +30,11 @@ main{
 }
 
 section {    
-    min-height: 100vh; /* Tam sayfa yüksekliği */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;    
-    transition: transform 0.5s ease-in-out; /* Animasyonlu geçiş */
+    transition: transform 0.5s ease-in-out;
 }
 
 .hidden-content {

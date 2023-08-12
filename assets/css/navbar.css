@@ -35,18 +35,20 @@ nav{
     color: var(--light-text-color);
     text-decoration: none;
 }
-.nav-section:hover .nav-border{
-    border-bottom: 0.3rem solid var(--navbar-color);
+.nav-section:hover .nav-hover-border{
+    border-bottom: 0.1rem solid var(--navbar-color);
+    border-radius: 1rem;
     animation: nav-section-animation 0.5s ease-in-out both;
 }
 .nav-section li{
     list-style: none;
 }
 
-.nav-border{
-    border-bottom: none;
+.nav-hover-border{
+    border-bottom: none;    
     transition: border-bottom 0.5s ease-in-out;    
 }
+
 @keyframes nav-section-animation {
     from {
         width: 0;
