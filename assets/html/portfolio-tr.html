@@ -3,80 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortfolioTR</title>
+    <title>Portfolio</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- imported CSS files -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/about-me.css">
     <link rel="stylesheet" href="../css/skills.css">
-    <link rel="stylesheet" href="../css/css/projects.css">
+    <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/educations.css">
-    <link rel="stylesheet" href="../css/css/career.css">
+    <link rel="stylesheet" href="../css/career.css">
     <link rel="stylesheet" href="../css/contact-me.css">
     <!-- imported JS files -->   
-    <script src="../js/titleAnimation.js"></script> 
-    <script src="../js/toggleLanguageMenu.js"></script>
     <script src="../js/handleLanguageOptions.js"></script>
+    <script src="../js/toggleLanguageMenu.js"></script>
+    <script src="../js/changeNavLinkBorderStyle.js"></script>
+    <script src="../js/updateNavBorders.js"></script>
+    <script src="../js/titleAnimation.js"></script> 
 </head>
 <body>
     <header>
         <nav>                             
             <div class="nav-logo">
-                <a href="#home" id="go-home">
-                    <h3>Oğuzhan Bayram</h3>
+                <a href="#home">
+                    <h3>OB Porfolio</h3>
                 </a>  
             </div>
             <ul class="nav-page-sections">
                 <li>
-                    <a href="#about-me" id="go-about-me" class="nav-section">                                                             
+                    <a href="#home" class="nav-section" id="go-home" data-section-id="home" onclick="changeNavLinkBorderStyle('home-border')">
+                        <h3>Ana Sayfa</h3>
+                        <div class="nav-border" id="home-border"></div>
+                        <div class="nav-hover-border"></div>
+                    </a>  
+                </li>
+                <li>
+                    <a href="#about-me" class="nav-section" id="go-about-me" data-section-id="about-me" onclick="changeNavLinkBorderStyle('about-me-border')">                                                             
                         <h3>Hakkımda</h3>                                               
-                        <div class="nav-border"></div>
+                        <div id="about-me-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#skills" id="go-skills" class="nav-section">
+                    <a href="#skills" class="nav-section"  id="go-skills" data-section-id="skills" onclick="changeNavLinkBorderStyle('skills-border')">
                         <h3>Yetenekler</h3>                                                
-                        <div class="nav-border"></div>
+                        <div id="skills-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#projects" id="go-projects" class="nav-section">
+                    <a href="#projects" class="nav-section" id="go-projects" data-section-id="projects" onclick="changeNavLinkBorderStyle('projects-border')">
                         <h3>Projeler</h3>                        
-                        <div class="nav-border"></div>
+                        <div id="projects-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#educations" id="go-educations" class="nav-section">
+                    <a href="#educations" class="nav-section"  id="go-educations" data-section-id="educations" onclick="changeNavLinkBorderStyle('educations-border')">
                         <h3>Eğitimler</h3>                                     
-                        <div class="nav-border"></div>
+                        <div id="educations-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#career" id="go-career" class="nav-section">
+                    <a href="#career" class="nav-section"  id="go-career" data-section-id="career" onclick="changeNavLinkBorderStyle('career-border')">
                         <h3>Kariyer</h3>                        
-                        <div class="nav-border"></div>
+                        <div id="career-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact-me" id="go-contact-me" class="nav-section">
+                    <a href="#contact-me" class="nav-section" id="go-contact-me" data-section-id="contact-me" onclick="changeNavLinkBorderStyle('contact-me-border')">
                         <h3>İletişim</h3>                        
-                        <div class="nav-border"></div>
+                        <div id="contact-me-border" class="nav-border"></div>
+                        <div class="nav-hover-border"></div>
                     </a>
                 </li>
             </ul>
-            <div id="language-toggle" class="nav-lang">
+            <div class="nav-lang" id="language-toggle">
                 <h3 id="language-en">Dil</h3>                
                 <ul id="language-options" class="language-options">
                     <li><button class="language-option" data-lang="en">EN</button></li>
                     <li><button class="language-option" data-lang="tr">TR</button></li>
                 </ul>
             </div>
+            <div id="">
+
+            </div>
         </nav>        
     </header>
     <main>
         <section id="home">
-            <h1>Home</h1>            
+            <h1>Ben Oğuzhan Bayram</h1>     
+            <h3 class="typed" id="typed-content" data-typed-items="Full Stack Developer, Bank-end Developer, .Net Developer, C# Developer"></h3>     
         </section>
         <section id="about-me">
             <h1>Hakkımda</h1>            
@@ -97,9 +117,20 @@
             <h1>İletişim</h1>                        
         </section>
     </main>    
-    <script>
+    <script>    
+        // Refresh page          
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        } 
+        // Language functions for page
         toggleLanguageMenu('nav-lang', 'language-options');
-        handleLanguageOptions("data-lang", "language-option", "../html/portfolio.html");
+        handleLanguageOptions("data-lang", "language-option", "../html/portfolio.html", "../html/portfolio-tr.html");
+        // Navbar's border functions for sections
+        var borderId = "home-border"; 
+        changeNavLinkBorderStyle(borderId);
+        window.addEventListener('scroll', updateNavBorders);
+        // Animation function for title informations to Home section
+        titleTextAnimation('typed-content', 'data-typed-items'); 
     </script>
 </body>
 </html>

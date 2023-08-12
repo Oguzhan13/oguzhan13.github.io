@@ -40,3 +40,17 @@ section {
 .hidden-content {
     display: none;
 }
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;        
+    }    
+}
+
+/* Tablet (orta büyüklükte ekranlar) için stil ayarları */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 15px;
+    }
+    
+}

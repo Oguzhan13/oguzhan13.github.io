@@ -8,6 +8,7 @@
     <!-- imported CSS files -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/hidden-menu.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/about-me.css">
     <link rel="stylesheet" href="../css/skills.css">
@@ -18,8 +19,9 @@
     <!-- imported JS files -->   
     <script src="../js/handleLanguageOptions.js"></script>
     <script src="../js/toggleLanguageMenu.js"></script>
-    <script src="../js/changeNavLinkBorderStyle.js"></script>
+    <script src="../js/changeNavLinkBorderStyle.js"></script>    
     <script src="../js/updateNavBorders.js"></script>
+    <script src="../js/toggleMenuVisibility.js"></script> 
     <script src="../js/titleAnimation.js"></script> 
 </head>
 <body>
@@ -32,68 +34,129 @@
             </div>
             <ul class="nav-page-sections">
                 <li>
-                    <a href="#home" id="go-home" data-section-id="home" class="nav-section" onclick="changeNavLinkBorderStyle('home-border')">
+                    <a href="#home" class="nav-section" id="go-home" data-section-id="home" onclick="changeNavLinkBorderStyle('home-border')">
                         <h3>Home</h3>
-                        <div id="home-border" class="nav-border"></div>
+                        <div class="nav-border" id="home-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>  
                 </li>
                 <li>
-                    <a href="#about-me" id="go-about-me" data-section-id="abput-me" class="nav-section" onclick="changeNavLinkBorderStyle('about-me-border')">                                                             
-                        <h3>About Me</h3>                                               
+                    <a href="#about-me" class="nav-section" id="go-about-me" data-section-id="about-me" onclick="changeNavLinkBorderStyle('about-me-border')">                                                             
+                        <h3>About</h3>                                               
                         <div id="about-me-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#skills" id="go-skills" data-section-id="skills" class="nav-section" onclick="changeNavLinkBorderStyle('skills-border')">
+                    <a href="#skills" class="nav-section"  id="go-skills" data-section-id="skills" onclick="changeNavLinkBorderStyle('skills-border')">
                         <h3>Skills</h3>                                                
                         <div id="skills-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#projects" id="go-projects" data-section-id="projects" class="nav-section"  onclick="changeNavLinkBorderStyle('projects-border')">
+                    <a href="#projects" class="nav-section" id="go-projects" data-section-id="projects" onclick="changeNavLinkBorderStyle('projects-border')">
                         <h3>Projects</h3>                        
                         <div id="projects-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#educations" id="go-educations" data-section-id="educations" class="nav-section"  onclick="changeNavLinkBorderStyle('educations-border')">
+                    <a href="#educations" class="nav-section"  id="go-educations" data-section-id="educations" onclick="changeNavLinkBorderStyle('educations-border')">
                         <h3>Educations</h3>                                     
                         <div id="educations-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#career" id="go-career" data-section-id="career" class="nav-section"  onclick="changeNavLinkBorderStyle('career-border')">
+                    <a href="#career" class="nav-section"  id="go-career" data-section-id="career" onclick="changeNavLinkBorderStyle('career-border')">
                         <h3>Career</h3>                        
                         <div id="career-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact-me" id="go-contact-me" data-section-id="contact-me" class="nav-section"  onclick="changeNavLinkBorderStyle('contact-me-border')">
+                    <a href="#contact-me" class="nav-section" id="go-contact-me" data-section-id="contact-me" onclick="changeNavLinkBorderStyle('contact-me-border')">
                         <h3>Contact</h3>                        
                         <div id="contact-me-border" class="nav-border"></div>
                         <div class="nav-hover-border"></div>
                     </a>
                 </li>
             </ul>
-            <div id="language-toggle" class="nav-lang">
+            <div class="nav-lang" id="language-toggle">
                 <h3 id="language-en">Language</h3>                
                 <ul id="language-options" class="language-options">
                     <li><button class="language-option" data-lang="en">EN</button></li>
                     <li><button class="language-option" data-lang="tr">TR</button></li>
                 </ul>
             </div>
+            <div class="nav-dropdown" id="sections-menu">
+                <img id="menu-icon" src="../img/icons/menu.svg" alt="Open Menu">
+                <img id="close-icon" src="../img/icons/close.svg" alt="Close Menu">
+            </div>
         </nav>        
     </header>
+    <div class="hidden-menu" id="hidden-menu">
+        <div class="menu-item-container">
+            <ul>
+                <li>
+                    <a href="#home">
+                        <h3>Home</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about-me">
+                        <h3>About</h3>                                
+                        <div class=".hidden-nav-border" data-section="about-me"></div>
+                    </a>
+                </li>
+                <li>                
+                    <a href="#skills">
+                        <h3>Skills</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <h3>Projects</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#educations">
+                        <h3>Educations</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#career">
+                        <h3>Career</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-me">
+                        <h3>Contact</h3>                                
+                        <div class=".hidden-nav-border" data-section="home"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="hidden-menu-lang" id="hidden-language-toggle">
+                <h3 id="hidden-language-en">Language
+                    <img id="hidden-icon"src="../img/icons/angle-down.svg" alt="language options">
+                </h3>                
+                <ul id="hidden-language-options" class="hidden-language-options">
+                    <li><button class="language-option" data-lang="en">EN</button></li>
+                    <li><button class="language-option" data-lang="tr">TR</button></li>
+                </ul>
+            </div>
+        </div>        
+    </div>
     <main>
         <section id="home">
             <h1>I am Oğuzhan Bayram</h1>     
-            <h3 id="typed-content" class="typed" data-typed-items="Full Stack Developer, Bank-end Developer, .Net Developer, C# Developer"></h3>     
+            <h3 class="typed" id="typed-content" data-typed-items="Full Stack Developer, Bank-end Developer, .Net Developer, C# Developer"></h3>     
         </section>
         <section id="about-me">
             <h1>About Me</h1>            
@@ -121,13 +184,34 @@
         } 
         // Language functions for page
         toggleLanguageMenu('nav-lang', 'language-options');
-        handleLanguageOptions("data-lang", "language-option", "../html/portfolio-tr.html");
+        handleLanguageOptions("data-lang", "language-option", "../html/portfolio.html", "../html/portfolio-tr.html");
         // Navbar's border functions for sections
         var borderId = "home-border"; 
         changeNavLinkBorderStyle(borderId);
-        window.addEventListener('scroll', updateNavBorders);
+        window.addEventListener('scroll', updateNavBorders);        
+        // Hidden Menu's function for toggle process to menu icon & close-icon        
+        document.getElementById('menu-icon').addEventListener('click', toggleMenuVisibility);
+        document.getElementById('close-icon').addEventListener('click', toggleMenuVisibility);
+        // Hidden-menu-lang function
+        document.addEventListener('DOMContentLoaded', function() {
+        var languageToggleIcon = document.getElementById("hidden-icon");
+        var hiddenLanguageOptions = document.getElementById("hidden-language-options");
+
+        languageToggleIcon.addEventListener('click', function() {
+            var currentSrc = languageToggleIcon.getAttribute('src');
+            
+            if (currentSrc === '../img/icons/angle-down.svg') {
+                languageToggleIcon.setAttribute('src', '../img/icons/angle-up.svg');
+                hiddenLanguageOptions.style.display = 'flex';
+            } else if (currentSrc === '../img/icons/angle-up.svg') {
+                languageToggleIcon.setAttribute('src', '../img/icons/angle-down.svg');
+                hiddenLanguageOptions.style.display = 'none';
+            }
+        });
+    }); 
         // Animation function for title informations to Home section
         titleTextAnimation('typed-content', 'data-typed-items'); 
+          
     </script>
 </body>
 </html>

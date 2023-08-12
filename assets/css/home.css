@@ -1,6 +1,6 @@
 #home {    
     color: var(--light-text-color);
-    background-image: url('../img/home-section.jpg'); /* Arka plan resminin yolunu belirtin */
+    background-image: url('../img/home-section.jpg');
     background-size: cover;
     background-position: center;    
     box-shadow: 0 0 8px 1px var(--navbar-color);
@@ -17,25 +17,47 @@
 #typed-content {
     white-space: nowrap;
     overflow: hidden;
-    position: relative; /* Add this to create a relative positioning context */
-    color: var(--light-text-color); /* Set the initial color to white */
+    position: relative;
+    color: var(--light-text-color);
 }
 
 #typed-content::after {
-    content: ''; /* Create an after pseudo-element */
+    content: ''; 
     display: inline-block;
-    width: 6px; /* Adjust the width of the cursor */
-    height: 1.1em; /* Adjust the height of the cursor */
-    background-color: var(--light-text-color); /* Set the color of the cursor */
-    margin-left: 2px; /* Adjust the distance between the cursor and text */
-    animation: blink-animation 1s infinite; /* Apply the blinking animation */
+    width: 6px; 
+    height: 1.1em;
+    background-color: var(--light-text-color);
+    margin-left: 2px; 
+    animation: blink-animation 1s infinite;
 }
 
 @keyframes blink-animation {
     0%, 100% {
-        opacity: 0; /* Hide the cursor */
+        opacity: 0; 
     }
     50% {
-        opacity: 1; /* Show the cursor */
+        opacity: 1; 
     }
+}
+
+@media (max-width: 767px) {
+    #home{        
+        font-size: x-large;
+        background-color: var(--navbar-background-color);        
+        background-size: 150% auto;        
+        background-position: bottom;        
+        background-repeat: no-repeat;
+    }    
+}
+
+/* Tablet (orta büyüklükte ekranlar) için stil ayarları */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #home{        
+        font-size: x-large;
+        background-color: var(--navbar-background-color);        
+        background-size: cover;
+        background-position: bottom;        
+        background-repeat: no-repeat;
+    }
+    
 }

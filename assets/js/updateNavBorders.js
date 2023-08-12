@@ -17,14 +17,14 @@ function updateNavBorders() {
                 const navBorderId = `${sectionId}-border`;
 
                 navBorders[index].setAttribute('id', navBorderId);
-                changeNavLinkBorderStyle(navBorderId);
+                changeNavLinkBorderStyle(navBorderId);                
             } else if (index + 1 < sections.length) {
                 const nextSection = sections[index + 1];
                 const nextSectionId = nextSection.getAttribute('id');
                 const navBorderId = `${nextSectionId}-border`;
 
                 navBorders[index].setAttribute('id', navBorderId);
-                changeNavLinkBorderStyle(navBorderId);
+                changeNavLinkBorderStyle(navBorderId);                
             }
         }
     });
