@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>        
+    <title>Index</title>
+    <script src="assets/js/redirectBasedOnLanguage.js"></script>
 </head>
 <body>        
-    <script>                 
-         var userLang = navigator.language || navigator.userLanguage;
-        
-        if (userLang === "tr" || userLang.startsWith("tr")) {
-            window.location.href = "assets/html/portfolio-tr.html";
-        }
-        else {
-            window.location.href = "assets/html/portfolio.html";
-        }
+    <script>   
+        const pathTr="assets/pages/portfolio-tr.html";
+        const pathEn="assets/pages/portfolio.html";
+                
+        redirectBasedOnLanguage(pathTr, pathEn);
     </script>
 </body>
 </html>

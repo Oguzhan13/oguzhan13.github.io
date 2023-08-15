@@ -1,56 +1,48 @@
+@import url("../../style.css");
+
+/* ------------------- nav -------------------  */
 nav{
     opacity: 0.9;
     color: var(--navbar-color);
-    background-color: var(--navbar-background-color);    
-    position: fixed;
+    background-color: var(--navbar-background-color);
     width: 100%;
-    min-height: 4rem;    
-    display: flex;    
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: no-wrap;
-    z-index: 1;
+    height: 8vh;
+    padding: 0 2rem;
+    position: fixed;
 }
-
-.nav-logo{
-    
-}
-.nav-logo a{
+nav a{
     color: var(--navbar-color);
     text-decoration: none;
 }
 
-.nav-page-sections {
+/* ------------------- nav-container -------------------  */
+.nav-item-list{
+    list-style: none;
+    width: 100%;
+    height: 8vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
-}
-.nav-page-sections li{
-    list-style: none;
 }
 
-.nav-section{
-    color: var(--light-text-color);
-    text-decoration: none;
+/* ------------------- 1. nav-item -------------------  */
+
+
+/* ------------------- 2. nav-item -------------------  */
+.nav-link-list ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-.nav-section:hover .nav-hover-border{
-    border-bottom: 0.1rem solid var(--navbar-color);
+.nav-item:hover .nav-item-border-hover{
+    border-bottom: 0.15rem solid var(--navbar-color);
     border-radius: 1rem;
-    animation: nav-section-animation 0.25s ease-in-out both;
+    animation: nav-border-animation 0.25s ease-in-out both;
 }
-.nav-section li{
-    list-style: none;
-}
-
-.nav-hover-border{
-    border-bottom: none;    
-    transition: border-bottom 0.5s ease-in-out;    
-}
-
-@keyframes nav-section-animation {
+@keyframes nav-border-animation {
     from {
         width: 0;
     }
@@ -58,97 +50,87 @@ nav{
         width: 100%;
     }
 }
+.nav-item-border-hover{
+    transition: border-bottom 0.5s ease-in-out;
+}
 
-.nav-lang{   
-    cursor: pointer;     
-    width: 8rem;
+/* ------------------- 3. nav-item -------------------  */
+#nav-lang{    
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
-
-.language-options{        
-    display: none;
-    list-style: none;    
-}
-
-.language-option{
-    cursor: pointer;
-    background-color: var(--navbar-color);
-    margin : 0.2rem;
-    padding: 0.2rem;
-    font-weight: 900;
-    border-radius: 0.3rem;
-    transition: 0.3s ease-in-out;
-}
-.language-option:hover{
-    color: var(--light-text-color);
-    background-color: var(--blue-color);    
+#nav-lang:hover .nav-icon{
     transform: scale(1.1);
 }
-
-/* This class is used in the 'toggleLanguageMenu.js' file. */
-.show-language-options {    
-    display: flex;
-}
-
-.nav-dropdown{
-    margin-right: 2rem;
-    display: none;
-}
-.nav-dropdown img{               
-    height: 2rem;    
+.nav-icon{
+    cursor: pointer;
+    width: 1.5rem;
     transition: 0.3s ease-in-out;
 }
-.nav-dropdown img:hover{
-    transform: scale(1.2);
+.nav-icon:hover{
+    transform: scale(1.1);
 }
-#menut-icon{
-    display: block;
-}
-#close-icon{
+#hide-nav-lang-content{
     display: none;
 }
-
-
+/* ------------------- 4. nav-item -------------------  */
+#nav-sidebar{
+    display: none;
+}
+/* ----------------------------------------- @media 767px -----------------------------------------  */
 @media (max-width: 767px) {
-    nav{
-        justify-content: space-between;
+
+    /* ------------------- 1. nav-item -------------------  */
+    #nav-logo{
+        font-size: larger;
     }
-    .nav-logo{
-        margin-left: 2rem;
-    }
-    .nav-page-sections{
+    /* ------------------- 2. nav-item -------------------  */
+    .nav-link-list{
         display: none;
     }
-
-    .nav-lang{
-        display: none  ;
+    /* ------------------- 3. nav-item -------------------  */
+    #nav-lang{
+        display: none;
     }
-
-    .nav-dropdown{
-        display: flex;
+    /* ------------------- 4. nav-item -------------------  */
+    #nav-sidebar{
+    display: flex;
     }
-    
+    #nav-menu-icon{
+        width: 2.5rem;
+    }
+    #nav-close-icon{
+        display: none;
+        width: 2.5rem;
+    }
 }
 
-/* Tablet (orta büyüklükte ekranlar) için stil ayarları */
+/* ----------------------------------------- @media 768px - 1023px -----------------------------------------  */
 @media (min-width: 768px) and (max-width: 1023px) {
-    nav{
-        justify-content: space-between;
+
+    /* ------------------- 1. nav-item -------------------  */
+    #nav-logo{
+        font-size: larger;
     }
-    .nav-logo{
-        margin-left: 2rem;
-    }
-    .nav-page-sections{
+    /* ------------------- 2. nav-item -------------------  */
+    .nav-link-list{
         display: none;
     }
-
-    .nav-lang{
-        display: none  ;
+    /* ------------------- 3. nav-item -------------------  */
+    #nav-lang{
+        display: none;
     }
-
-    .nav-dropdown{
-        display: flex;
+    /* ------------------- 4. nav-item -------------------  */
+    #nav-sidebar{
+    display: flex;
     }
+    #nav-menu-icon{
+        width: 2.5rem;
+    }
+    #nav-close-icon{
+        display: none;
+    }
+    
 }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <!-- JS -->    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-item-list">
+                <li class="nav-item" id="nav-logo">
+                    <a href="../pages/portfolio.html">
+                        <h3>OB Portfolio</h3>
+                    </a>
+                </li>
+                <li class="nav-link-list">
+                    <ul>
+                        <li>
+                            <a class="nav-item" href="#home">
+                                <h3>Home</h3>
+                                <div class="nav-item-border" id="home-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#about">
+                                <h3>About</h3>
+                                <div class="nav-item-border" id="about-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#skill">
+                                <h3>Skills</h3>
+                                <div class="nav-item-border" id="skill-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#project">
+                                <h3>Projects</h3>
+                                <div class="nav-item-border" id="home-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#education">
+                                <h3>Educations</h3>
+                                <div class="nav-item-border" id="education-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#career">
+                                <h3>Career</h3>
+                                <div class="nav-item-border" id="career-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#contact">
+                                <h3>Contact</h3>
+                                <div class="nav-item-border" id="contact-border"></div>
+                                <div class="nav-item-border-hover"></div>
+                            </a>
+                        </li>
+                    </ul>                    
+                </li>
+                <li class="nav-item" id="nav-lang">
+                    <h3 >Language</h3>
+                    <img class="nav-icon" id="show-nav-lang-content" src="../img/icons/angle-down.svg" alt="Show Language Icon">
+                    <img class="nav-icon" id="hide-nav-lang-content" src="../img/icons/angle-up.svg" alt="Hide Language Icon">                    
+                </li>
+                <li class="nav-item" id="nav-sidebar">
+                    <img class="nav-icon" id="nav-menu-icon" src="../img/icons/menu.svg" alt="Open Menu">
+                    <img class="nav-icon" id="nav-close-icon" src="../img/icons/close.svg" alt="Close Menu">                     
+                </li>
+            </ul>
+        </nav>        
+    </header>
+    <div class="sidebar">
+        <div class="nav">
+            
+        </div>
+
+    </div>
+    <main>
+        <section id="home">
+            <h1>I am Oğuzhan Bayram</h1>     
+            <h3 class="typed" id="typed-content" title-items="Full Stack Developer, Back-end Developer, .Net Developer, C# Developer"></h3>     
+        </section>
+        <section id="about">
+            <h1>About Me</h1>            
+        </section>        
+        <section id="skill">
+            <h1>Skills</h1>            
+        </section>        
+        <section id="project">
+            <h1>Projects</h1>                        
+        </section>        
+        <section id="education">
+            <h1>Educations</h1>            
+        </section>        
+        <section id="career">
+            <h1>Career</h1>                        
+        </section>        
+        <section id="contact">
+            <h1>Contact</h1>                        
+        </section>
+    </main>
+    <script type="module">
+        // imports
+        import toggleIconById from '../js/toggleIconById.js';
+        
+        // show & hide content functions
+        toggleIconById("show-nav-lang-content", "hide-nav-lang-content");
+        toggleIconById("nav-menu-icon", "nav-close-icon");
+    </script>    
+</body>
+</html>

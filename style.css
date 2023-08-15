@@ -18,7 +18,7 @@ html{
 }
 
 body{        
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;    
 }
 
 header{
@@ -26,10 +26,11 @@ header{
 }
 
 main{
-    
+    background-color: grey;    
 }
 
 section {    
+    border: 2px solid red;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -37,17 +38,14 @@ section {
     transition: transform 0.5s ease-in-out;
 }
 
-.hidden-content {
-    display: none;
-}
-
+/* ----------------------------------------- @media 767px -----------------------------------------  */
 @media (max-width: 767px) {
     body {
         font-size: 14px;        
     }    
 }
 
-/* Tablet (orta büyüklükte ekranlar) için stil ayarları */
+/* ----------------------------------------- @media 768px - 1023px -----------------------------------------  */
 @media (min-width: 768px) and (max-width: 1023px) {
     body {
         font-size: 15px;
