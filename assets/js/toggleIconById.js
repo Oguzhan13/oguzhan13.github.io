@@ -1,4 +1,4 @@
-async function toggleIconById(showId, hideId) {
+async function toggleIconById(showId, hideId, contentId) {
     const showElement = document.getElementById(showId);
     const hideElement = document.getElementById(hideId);
     
@@ -10,11 +10,13 @@ async function toggleIconById(showId, hideId) {
     showElement.addEventListener("click", async () => {
         hideElement.style.display = "block";
         showElement.style.display = "none";
+        document.getElementById(contentId).style.display = "flex";
     });
 
     hideElement.addEventListener("click", async () => {
         showElement.style.display = "block";
         hideElement.style.display = "none";
+        document.getElementById(contentId).style.display = "none";
     });
 }
 

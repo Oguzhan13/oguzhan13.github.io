@@ -8,7 +8,7 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
-    <!-- JS -->    
+    <link rel="stylesheet" href="../css/sidebar.css" />      
 </head>
 <body>
     <header>
@@ -84,11 +84,72 @@
             </ul>
         </nav>        
     </header>
-    <div class="sidebar">
-        <div class="nav">
-            
+    <div class="sidebar-container">
+        <div class="sidebar-item" id="nav-lang-content">
+            <div class="button-container" id="nav-lang-button">
+                <button class="lang-button" id="en-nav-language">EN</button>
+                <button class="lang-button" id="tr-nav-language">TR</button>
+            </div>
         </div>
-
+        <div class="sidebar-content" id="mobile-menu-container">
+            <li class="sidebar-link-list">
+                <ul>
+                    <li class="sidebar-item" id="sidebar-lang">
+                        <h3>Language
+                            <img class="sidebar-icon" id="show-sidebar-lang-content" src="../img/icons/angle-down.svg" alt="Show Language Icon">
+                            <img class="sidebar-icon" id="hide-sidebar-lang-content" src="../img/icons/angle-up.svg" alt="Hide Language Icon">
+                        </h3>
+                        <div class="lang-content" id="sidebar-lang-content">
+                            <button class="lang-button" id="en-sidebar-language">EN</button>
+                            <button class="lang-button" id="tr-sidebar-language">TR</button>            
+                        </div>             
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#home">
+                            <h3>Home</h3>
+                            <div class="nav-item-border" id="home-border"></div>
+                            <div class="nav-item-border-hover"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#about">
+                            <h3>About</h3>
+                            <div class="sidebar-item-border" id="about-border"></div>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#skill">
+                            <h3>Skills</h3>
+                            <div class="sidebar-item-border" id="skill-border"></div>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#project">
+                            <h3>Projects</h3>
+                            <div class="sidebar-item-border" id="home-border"></div>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#education">
+                            <h3>Educations</h3>
+                            <div class="sidebar-item-border" id="education-border"></div>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-item" href="#career">
+                            <h3>Career</h3>
+                            <div class="sidebar-item-border" id="career-border"></div>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nasidebarv-item" href="#contact">
+                            <h3>Contact</h3>
+                            <div class="sidebar-item-border" id="contact-border"></div>                            
+                        </a>
+                    </li>
+                </ul>                    
+            </li>            
+        </div>
     </div>
     <main>
         <section id="home">
@@ -117,10 +178,15 @@
     <script type="module">
         // imports
         import toggleIconById from '../js/toggleIconById.js';
-        
+        import { initializeLanguageButtons } from '../js/initializeLanguageButtons.js';
+
         // show & hide content functions
-        toggleIconById("show-nav-lang-content", "hide-nav-lang-content");
-        toggleIconById("nav-menu-icon", "nav-close-icon");
-    </script>    
+        toggleIconById("show-nav-lang-content", "hide-nav-lang-content", "nav-lang-content");
+        initializeLanguageButtons("en-nav-language", "tr-nav-language", "portfolio.html", "portfolio-tr.html");
+        toggleIconById("nav-menu-icon", "nav-close-icon", "mobile-menu-container");
+        toggleIconById("show-sidebar-lang-content", "hide-sidebar-lang-content", "sidebar-lang-content");
+        
+    </script>
+     
 </body>
 </html>

@@ -1,0 +1,111 @@
+@import url("../../style.css");
+
+/* ------------------- sidebar -------------------  */
+.sidebar-container {
+    position: fixed;
+    width: 100%;
+    top: 8vh;
+}
+/* ------------------- 1. sidebar-item -------------------  */
+#nav-lang-content{    
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;    
+}
+#nav-lang-button{
+    opacity: 0.85;
+    background-color: var(--navbar-color);
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    margin-right: 1.3rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem;
+}
+.lang-button{
+    font-size: large;
+    margin: 1rem;
+    border-radius: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+}
+.lang-button:hover{
+    font-size: larger;
+    color: var(--navbar-color);
+    background-color: var(--blue-color);
+    transform: scale(1.2);
+}
+
+/* ------------------- 2. sidebar-item -------------------  */
+#mobile-menu-container{
+    display: none;
+}
+
+/* ----------------------------------------- @media 767px -----------------------------------------  */
+@media (max-width: 767px) {
+    #nav-lang-content{
+        display: none;
+    }
+    #mobile-menu-container{
+        opacity: 0.85;
+        color: var(--dark-text-color);
+        background-color: var(--navbar-color);
+        box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem;
+        list-style: none;
+        font-size: larger;
+        margin: 1rem;
+        height: 88vh;
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    #mobile-menu-container ul{        
+        list-style: none;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #mobile-menu-container a{
+        color: var(--dark-text-color);
+        text-decoration: none;
+    }
+    
+    .sidebar-link-list{
+        width: 100%;
+    }
+
+    #sidebar-lang h3{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }   
+    
+    .sidebar-icon{
+        width: 1.5rem;
+        transition: 0.5s ease-in-out;
+    }
+    .sidebar-icon:hover{
+        transform: scale(1.2);
+    }
+    #show-sidebar-lang-content{
+        background-color: var(--dark-text-color);
+        border-radius: 0.3rem;
+    }
+    #hide-sidebar-lang-content{
+        display: none;
+        background-color: var(--dark-text-color);
+        border-radius: 0.3rem;
+    }
+
+    #sidebar-lang-content{
+        display: none;
+    }
+
+}
+
+/* ----------------------------------------- @media 768px - 1023px -----------------------------------------  */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
