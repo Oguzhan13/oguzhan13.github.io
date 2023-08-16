@@ -38,6 +38,29 @@ section {
     transition: transform 0.5s ease-in-out;
 }
 
+.slide-up img{    
+    background-color: var(--blue-color);
+    opacity: 0.6;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem var(--navbar-background-color);
+    border-radius: 50%;
+    width: 2rem;
+    position: fixed;  
+    bottom:3rem;
+    right:3rem;    
+    transition: 0.5s ease-in-out;
+}
+.slide-up img:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+.blue {
+    color: blue;
+}
+
+.pink {
+    color: pink;
+}
+
 /* ----------------------------------------- @media 767px -----------------------------------------  */
 @media (max-width: 767px) {
     body {
