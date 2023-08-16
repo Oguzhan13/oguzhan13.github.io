@@ -24,49 +24,49 @@
                         <li>
                             <a class="nav-item" href="#home">
                                 <h3>Home</h3>
-                                <div class="nav-item-border" id="home-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-home"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#about">
                                 <h3>About</h3>
-                                <div class="nav-item-border" id="about-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-about"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#skill">
                                 <h3>Skills</h3>
-                                <div class="nav-item-border" id="skill-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-skill"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#project">
                                 <h3>Projects</h3>
-                                <div class="nav-item-border" id="project-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-project"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#education">
                                 <h3>Educations</h3>
-                                <div class="nav-item-border" id="education-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-education"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#career">
                                 <h3>Career</h3>
-                                <div class="nav-item-border" id="career-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-career"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="#contact">
                                 <h3>Contact</h3>
-                                <div class="nav-item-border" id="contact-border"></div>
+                                <div class="nav-item-border" id="nav-item-border-contact"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
@@ -107,43 +107,43 @@
                     <li>
                         <a class="sidebar-item" href="#home">
                             <h3>Home</h3>
-                            <div class="sidebar-item-border" id="home-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-home"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#about">
                             <h3>About</h3>
-                            <div class="sidebar-item-border" id="about-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-about"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#skill">
                             <h3>Skills</h3>
-                            <div class="sidebar-item-border" id="skill-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-skill"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#project">
                             <h3>Projects</h3>
-                            <div class="sidebar-item-border" id="project-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-project"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#education">
                             <h3>Educations</h3>
-                            <div class="sidebar-item-border" id="education-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-education"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#career">
                             <h3>Career</h3>
-                            <div class="sidebar-item-border" id="career-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-career"></div>                            
                         </a>
                     </li>
                     <li>
                         <a class="sidebar-item" href="#contact">
                             <h3>Contact</h3>
-                            <div class="sidebar-item-border" id="contact-border"></div>                            
+                            <div class="sidebar-item-border" id="sidebar-item-border-contact"></div>                            
                         </a>
                     </li>
                 </ul>                    
@@ -186,9 +186,11 @@
         initializeLanguageButtons("en-sidebar-language", "tr-sidebar-language", "portfolio.html", "portfolio-tr.html");
         toggleIconById("nav-menu-icon", "nav-close-icon", "mobile-menu-container");
         toggleIconById("show-sidebar-lang-content", "hide-sidebar-lang-content", "sidebar-lang-content");
-                
+        
         // navbar & sidebar functions        
         changeBorderBottom("nav-item", ".nav-item-border", "0.15rem solid var(--navbar-color)");
+        changeBorderBottom("sidebar-item", ".sidebar-item-border", "0.15rem solid var(--dark-text-color)");
+        
                 
     </script>
      

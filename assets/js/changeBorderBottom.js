@@ -22,7 +22,8 @@ export function changeBorderBottom(borderParentClass, borderClass, borderBottomS
         link.addEventListener("click", () => {
             const hrefValue = link.getAttribute("href");
             if (hrefValue) {
-                const linkId = hrefValue.substring(1) + "-border";
+                const linkId = borderClass.substring(1) + "-" + hrefValue.substring(1);
+                console.log(linkId);
                 changeBorderBottomStyle(linkId);
             }
         });
