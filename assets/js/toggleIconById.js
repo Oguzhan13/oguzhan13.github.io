@@ -1,4 +1,4 @@
-async function toggleIconById(showId, hideId, contentId) {
+function toggleIconById(showId, hideId, contentId) {
     const showElement = document.getElementById(showId);
     const hideElement = document.getElementById(hideId);
     

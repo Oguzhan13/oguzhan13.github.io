@@ -45,7 +45,7 @@
                         <li>
                             <a class="nav-item" href="#project">
                                 <h3>Projects</h3>
-                                <div class="nav-item-border" id="home-border"></div>
+                                <div class="nav-item-border" id="project-border"></div>
                                 <div class="nav-item-border-hover"></div>
                             </a>
                         </li>
@@ -107,8 +107,7 @@
                     <li>
                         <a class="sidebar-item" href="#home">
                             <h3>Home</h3>
-                            <div class="nav-item-border" id="home-border"></div>
-                            <div class="nav-item-border-hover"></div>
+                            <div class="sidebar-item-border" id="home-border"></div>                            
                         </a>
                     </li>
                     <li>
@@ -126,7 +125,7 @@
                     <li>
                         <a class="sidebar-item" href="#project">
                             <h3>Projects</h3>
-                            <div class="sidebar-item-border" id="home-border"></div>                            
+                            <div class="sidebar-item-border" id="project-border"></div>                            
                         </a>
                     </li>
                     <li>
@@ -142,7 +141,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nasidebarv-item" href="#contact">
+                        <a class="sidebar-item" href="#contact">
                             <h3>Contact</h3>
                             <div class="sidebar-item-border" id="contact-border"></div>                            
                         </a>
@@ -178,14 +177,19 @@
     <script type="module">
         // imports
         import toggleIconById from '../js/toggleIconById.js';
-        import { initializeLanguageButtons } from '../js/initializeLanguageButtons.js';
+        import { initializeLanguageButtons } from '../js/initializeLanguageButtons.js';        
+        import { changeBorderBottom } from '../js/changeBorderBottom.js';
 
         // show & hide content functions
         toggleIconById("show-nav-lang-content", "hide-nav-lang-content", "nav-lang-content");
         initializeLanguageButtons("en-nav-language", "tr-nav-language", "portfolio.html", "portfolio-tr.html");
+        initializeLanguageButtons("en-sidebar-language", "tr-sidebar-language", "portfolio.html", "portfolio-tr.html");
         toggleIconById("nav-menu-icon", "nav-close-icon", "mobile-menu-container");
         toggleIconById("show-sidebar-lang-content", "hide-sidebar-lang-content", "sidebar-lang-content");
-        
+                
+        // navbar & sidebar functions        
+        changeBorderBottom("nav-item", ".nav-item-border", "0.15rem solid var(--navbar-color)");
+                
     </script>
      
 </body>
