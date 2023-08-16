@@ -118,7 +118,7 @@
                     </li>
                     <li>
                         <a class="sidebar-item" href="#skill">
-                            <h3 class="sidebar-item-border-header" id="sidebar-item-border-home-skill">Skills</h3>
+                            <h3 class="sidebar-item-border-header" id="sidebar-item-border-skill-header">Skills</h3>
                             <div class="sidebar-item-border" id="sidebar-item-border-skill"></div>                            
                         </a>
                     </li>
@@ -181,7 +181,7 @@
         // imports
         import toggleIconById from '../js/toggleIconById.js';
         import { initializeLanguageButtons } from '../js/initializeLanguageButtons.js';        
-        import { changeBorderBottom } from '../js/changeBorderBottom.js';
+        import { changeLinkListStyle } from '../js/changeLinkListStyle.js';
 
         // show & hide content functions
         toggleIconById("show-nav-lang-content", "hide-nav-lang-content", "nav-lang-content");
@@ -191,8 +191,8 @@
         toggleIconById("show-sidebar-lang-content", "hide-sidebar-lang-content", "sidebar-lang-content");
         
         // navbar & sidebar functions        
-        changeBorderBottom("nav-item", ".nav-item-border", "0.15rem solid var(--navbar-color)", "var(--navbar-color)", "var(--light-text-color)");
-        changeBorderBottom("sidebar-item", ".sidebar-item-border", "0.15rem solid var(--dark-text-color)", "var(--dark-text-color)", "var(--blue-color)");
+        changeLinkListStyle("nav-item", ".nav-item-border", "0.15rem solid var(--navbar-color)", "var(--navbar-color)", "var(--light-text-color)");
+        changeLinkListStyle("sidebar-item", ".sidebar-item-border", "0.15rem solid var(--dark-text-color)", "var(--dark-text-color)", "var(--blue-color)");
         
 
 

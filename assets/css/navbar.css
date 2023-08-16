@@ -80,8 +80,8 @@ nav a{
     display: none;
 }
 
-/* ----------------------------------------- @media 767px -----------------------------------------  */
-@media (max-width: 767px) {
+/* ----------------------------------------- @media 1023px -----------------------------------------  */
+@media (max-width: 1023px) {
 
     /* ------------------- 1. nav-item -------------------  */
     #nav-logo{
@@ -106,32 +106,4 @@ nav a{
         display: none;
         width: 2.5rem;
     }
-}
-
-/* ----------------------------------------- @media 768px - 1023px -----------------------------------------  */
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    /* ------------------- 1. nav-item -------------------  */
-    #nav-logo{
-        font-size: larger;
-    }
-    /* ------------------- 2. nav-item -------------------  */
-    .nav-link-list{
-        display: none;
-    }
-    /* ------------------- 3. nav-item -------------------  */
-    #nav-lang{
-        display: none;
-    }
-    /* ------------------- 4. nav-item -------------------  */
-    #nav-sidebar{
-    display: flex;
-    }
-    #nav-menu-icon{
-        width: 2.5rem;
-    }
-    #nav-close-icon{
-        display: none;
-    }
-    
 }
