@@ -1,30 +1,19 @@
 export function changeBorderBottom(borderParentClass, borderClass, borderBottomStyle, defaultColor, clickedColor) {
+
     function changeBorderBottomStyle(borderId) {
-        var targetBorder = document.getElementById(borderId);
-        var targetHeader = document.getElementById(borderId + "-header");
-
-        if (targetBorder && targetHeader) {
-            var allBorders = document.querySelectorAll(borderClass);
-            var allHeaders = document.querySelectorAll(borderClass + "-header");
-
-            allBorders.forEach(border => {
-                border.style.borderBottom = "none";
-                border.classList.remove("active");
-            });
-
-            allHeaders.forEach((header, index) => {
-                if (header === targetHeader) {
-                    console.log("targetHeader eşleşti");
-                    header.style.color = clickedColor;
-                } else {
-                    header.style.color = defaultColor;
-                }
-            });
-
-            targetBorder.style.borderBottom = borderBottomStyle;
-            targetBorder.classList.add("active");
-        }        
+        var targetBorder = document.getElementById(borderId);        
+    
+        var allBorders = document.querySelectorAll(borderClass);
+        allBorders.forEach((border, index) => {
+            border.style.borderBottom = "none";
+            border.classList.remove("active");
+        });     
+    
+        targetBorder.style.borderBottom = borderBottomStyle;
+        targetBorder.classList.add("active");
     }
+    
+    
     
     function updateBorderBottom(){
         const sections = document.querySelectorAll('section');
