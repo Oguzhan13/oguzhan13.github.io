@@ -1,0 +1,131 @@
+@import url("../../../style.css");
+
+/* ------------------- nav -------------------  */
+nav{    
+    opacity: 0.9;
+    background-color: var(--navbar-background-color);
+    position: fixed;    
+    width: 100%;
+    height: 10vh;
+}
+
+/* ------------------- nav-container -------------------  */
+.container{
+    color: var(--navbar-color);
+    font-size: x-large;    
+    padding: 0 1rem;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.container a{
+    color: var(--navbar-color);
+    text-decoration: none;
+}
+
+/* ------------------- menu-item -------------------  */
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+.menu-item ul{
+    list-style: none;
+}
+#logo-menu-item{
+    padding-left: 1rem;
+}
+/* ------------------- 1. menu-item -------------------  */
+#link-menu-item-desktop ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.section-link {    
+    height: 0.15rem;
+}
+.section-link:hover + .section-link-border{ 
+    animation: border-animation 0.45s ease-in-out both;
+}
+@keyframes border-animation {
+    from {
+        width: 2%;
+        height: 2%;        
+        border: 0.12rem solid var(--navbar-color);        
+    }
+    to {
+        width: 100%;
+        height: 2%;        
+        background-color: var(--navbar-color);
+        border: 0.12rem solid var(--navbar-color);        
+    }
+}
+
+/* ------------------- 2. menu-item -------------------  */
+#lang-menu-item-desktop{
+    cursor: context-menu;
+    padding-right: 1rem;
+}
+
+#lang-menu-item-desktop:hover .display-icon{
+    transform: scale(1.1);
+}
+#lang-menu-item-desktop:hover .hide-icon{
+    transform: scale(1.1);
+}
+
+/* ------------------- icons & buttons -------------------  */
+.display-icon{
+    cursor: pointer;
+    width: 2rem;
+    transition: 0.5s ease-in-out;
+}
+.display-icon:hover{
+    transform: scale(1.1);
+}
+.hide-icon{
+    display: none;
+    cursor: pointer;
+    width: 2rem;
+    transition: 0.5s ease-in-out;
+}
+.hide-icon:hover{
+    transform: scale(1.1);
+}
+#toggle-menu-item-desktop{
+    display: none;
+}
+
+.button{
+    cursor: pointer;
+    font-size: large;
+    margin: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
+    border-radius: 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+.button:hover{
+    color: var(--navbar-color);
+    background-color: var(--blue-color);    
+    transform: scale(1.1);
+}
+
+@media(max-width: 1023px){
+    #toggle-menu-item-desktop{
+        display: flex;
+        padding-right: 1rem;     
+    }
+    #menu-display-icon-desktop, #menu-hide-icon-desktop{
+        width: 3rem;
+    }
+    
+    #lang-menu-item-desktop{
+        display: none;
+    }
+}
