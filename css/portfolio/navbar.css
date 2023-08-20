@@ -1,3 +1,14 @@
+
+/* ||||||||||| CSS SECTIONS ||||||||||||||||||| */
+/* ----------   nav-container ----------------- */
+/* ----------   sections-links ---------------- */
+/* ----------   lang-menu & lang-dropdown ----- */
+/* ----------   nav-menu ---------------------- */
+/* ----------   icon & button ----------------- */
+/* *********** SMALL SCREEN ******************* */
+/* |||||||||||||||||||||||||||||||||||||||||||| */
+
+/* --------------------------- nav-container --------------------------- */
 nav{
     z-index: 1;
     opacity: 0.9;
@@ -22,9 +33,43 @@ nav ul{
     align-items: center;
     gap: 1rem;
 }
+nav ul li{
+    min-height: 2rem;
+}
 
+/* --------------------------- section-links --------------------------- */
+.section-links{    
+    display: flex;
+    align-items: center;
+}
+
+.section-link:hover .link-border{ 
+    animation: border-animation 0.45s ease-in-out both;
+}
+@keyframes border-animation {
+    from {
+        width: 2%;
+        height: 2%;        
+        border: 0.12rem solid var(--navbar-color);        
+    }
+    to {
+        width: 100%;
+        height: 2%;        
+        background-color: var(--navbar-color);
+        border: 0.12rem solid var(--navbar-color);        
+    }
+}
+.section-link-active{    
+    border-bottom: 0.15rem solid var(--navbar-color);
+}
+.section-link-active a{
+    color: var(--light-text-color);
+}
+
+/* --------------------------- lang-menu & lang-dropdown --------------------------- */
 .lang-menu {
-    display: flex;    
+    display: flex;
+    justify-content: space-between;   
     align-items: center;
     gap: 0.5rem
 }
@@ -42,8 +87,7 @@ nav ul{
 }
 .lang-buttons{
     z-index: 2;
-    opacity: 0.90;
-    width: 10rem;
+    opacity: 0.9;    
     padding: 1rem;
     margin-right: 1rem;    
     border-bottom-left-radius: 0.2rem;
@@ -56,91 +100,67 @@ nav ul{
     gap: 1rem;
 }
 
+/* --------------------------- nav-menu --------------------------- */
 .nav-menu{
     display: none;
-}
-
-
-
-
-
-
-/* --------------------------------------------------- */
-.section-link {    
-    height: 0.15rem;
-}
-.section-link:hover + .link-border{ 
-    animation: border-animation 0.45s ease-in-out both;
-}
-@keyframes border-animation {
-    from {
-        width: 2%;
-        height: 2%;        
-        border: 0.12rem solid var(--navbar-color);        
-    }
-    to {
-        width: 100%;
-        height: 2%;        
-        background-color: var(--navbar-color);
-        border: 0.12rem solid var(--navbar-color);        
-    }
-}
-.section-link-active{
-    color: var(--light-text-color);
-    border-bottom: 0.15rem solid var(--navbar-color);
 }
 
 /* --------------------------- icon & button --------------------------- */
 .menu-icon{
     width: 2.5rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .menu-icon:hover{
     transform: scale(1.1);
 }
+
 .close-icon{
     display: none;
     width: 2.5rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .close-icon:hover{
     transform: scale(1.1);
 }
+
 .display-icon{
     width: 1.5rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .display-icon:hover{
     transform: scale(1.2);
 }
+
 .hide-icon{
     display: none;
     width: 1.5rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .hide-icon:hover{
     transform: scale(1.2);
 }
+
 .en-button{    
     width: 2.5rem;
     height: 2.5rem;
     font-size: large;
     box-shadow: 0.1rem 0.2rem 0.4rem 0.2rem black;
     border-radius: 0.2rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .en-button:hover{
     background-color: var(--blue-color);
     color: var(--navbar-color);
     transform: scale(1.1);
 }
+
 .tr-button{    
     width: 2.5rem;
     height: 2.5rem;
     font-size: large;
     box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem black;
     border-radius: 0.2rem;
-    transition: 0.5s ease-in-out;    
+    transition: 0.3s ease-in-out;    
 }
 .tr-button:hover{    
     background-color: var(--blue-color);
@@ -157,14 +177,117 @@ nav ul{
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .slide-up:hover{
     opacity: 1;
-    transform: scale(0.4);
+    transform: scale(0.35);
 }
 
-/* --------------------------------------------------- */
+/* ************************************** SMALL SCREEN ************************************** */
 @media(max-width: 1023px){
 
+    /* --------------------------- nav-container --------------------------- */    
+
+
+    /* --------------------------- section-links --------------------------- */
+    .section-links{
+        opacity: 0.9;
+        color: var(--navbar-background-color);
+        background-color: var(--navbar-color);
+        border-radius: 0.2rem;
+        box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem black;     
+        height: 89vh;
+        position: absolute;
+        top: 9vh;
+        left: 1rem;
+        right: 1rem;        
+        display: none;
+        flex-direction: column;        
+        z-index: 2;
+    }
+    .section-links a{
+        color: var(--dark-text-color);
+    }
+    .section-links ul{          
+        height: auto;
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    .section-link{            
+        width: 100%;
+    }
+
+    .section-link:hover .link-border{ 
+        animation: border-animation 0.45s ease-in-out both;
+    }
+    @keyframes border-animation {
+        from {
+            width: 2%;
+            height: 2%;        
+            border: 0.12rem solid var(--dark-text-color);        
+        }
+        to {
+            width: 100%;
+            height: 2%;        
+            background-color: var(--dark-text-color);
+            border: 0.12rem solid var(--dark-text-color);        
+        }
+    }
+    .section-link-active{
+        width: 100%;
+        border-bottom: 0.15rem solid var(--dark-text-color);
+    }
+    .section-link-active a{
+        color: var(--blue-color);
+    }
+
+    /* --------------------------- lang-menu & lang-dropdown --------------------------- */
+    .lang-menu{
+        color: var(--dark-text-color);               
+        position: absolute;        
+        top: 27rem;
+        left: 3.5rem;
+        z-index: 3;   
+        display: none;
+    }
+    .lang-dropdown{        
+        position: absolute;
+        top: 29rem;
+        right: 2rem;
+        display: none;
+        z-index: 4;                
+    }
+    .lang-buttons{
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    /* --------------------------- nav-menu --------------------------- */
+    .nav-menu{
+        display: block;
+    }
+
+    /* --------------------------- icon & button --------------------------- */
+    .display-icon{
+        background-color: var(--dark-text-color);
+        border-radius: 0.2rem;
+    }
+    #lang-display-icon{
+        position: fixed;
+        right: 3.5rem;
+    }
+
+    .hide-icon{
+        background-color: var(--dark-text-color);
+        border-radius: 0.2rem;
+    }
+    #lang-hide-icon{
+        position: fixed;
+        right: 3.5rem;
+    }
 }

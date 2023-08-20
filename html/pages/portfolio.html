@@ -24,34 +24,34 @@
                 <li>
                     <a href="portfolio.html">OB Portfolio</a>
                 </li>
-                <li>
+                <li class="section-links">
                     <ul>
-                        <li>
-                            <a class="section-link" href="#home">Home</a>
+                        <li class="section-link" id="home-section-link">
+                            <a href="#home">Home</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#about">About</a>
+                        <li class="section-link" id="about-section-link">
+                            <a href="#about">About</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#skill">Skills</a>
+                        <li class="section-link" id="skill-section-link">
+                            <a href="#skill">Skills</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#project">Projects</a>
+                        <li class="section-link" id="project-section-link">
+                            <a href="#project">Projects</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#education">Educations</a>
+                        <li class="section-link" id="education-section-link">
+                            <a href="#education">Educations</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#career">Career</a>
+                        <li class="section-link" id="career-section-link">
+                            <a href="#career">Career</a>
                             <div class="link-border"></div>
                         </li>
-                        <li>
-                            <a class="section-link" href="#contact">Contact</a>
+                        <li class="section-link" id="contact-section-link">
+                            <a href="#contact">Contact</a>
                             <div class="link-border"></div>
                         </li>
                     </ul>
@@ -67,7 +67,7 @@
                 </li>
             </ul>
             <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
-            <div class="lang-dropdown">
+            <div class="lang-dropdown" id="nav-lang-dropdown">
                 <div class="lang-buttons">
                     <button class="en-button">EN</button>
                     <button class="tr-button">TR</button>
@@ -101,12 +101,40 @@
     </main>
     <script type="module">
         import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
+        import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';
+        // import { handleResolutionChange } from '../../js/utils/handleResolutionChange.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
         
         window.addEventListener('DOMContentLoaded', updateNavLinkStyle);  
         window.addEventListener('scroll', updateNavLinkStyle);
+        
+        // const resolutionThreshold = 1023;
+        // const elementIdsToHide = ['lang-buttons', 'en-button', 'tr-button'];        
+        // handleResolutionChange(resolutionThreshold, elementIdsToHide);
+
+        const menuIcon = document.getElementById('nav-menu-icon');
+        const closeIcon = document.getElementById('nav-close-icon');
+        const sectionLinks = document.querySelector('.section-links');
+        const langMenu = document.querySelector('.lang-menu');
+        
+        menuIcon.addEventListener('click', () => {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            sectionLinks.style.display = 'flex';
+            langMenu.style.display = 'flex';
+        });
+        
+        closeIcon.addEventListener('click', () => {
+            closeIcon.style.display = 'none';
+            menuIcon.style.display = 'block';
+            sectionLinks.style.display = 'none';
+            langMenu.style.display = 'none';
+        });
+
+        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex')
 
         titleAnimation('typed-content', 'title-items');
+
     </script>
 </body>
 </html>

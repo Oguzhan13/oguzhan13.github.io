@@ -28,14 +28,21 @@ header{
 /* ----------------------------------------- @media 767px -----------------------------------------  */
 @media (max-width: 767px) {
     body {
-        font-size: 14px;        
+        font-size: 14px;
     }    
 }
 
 /* ----------------------------------------- @media 768px - 1023px -----------------------------------------  */
 @media (min-width: 768px) and (max-width: 1023px) {
     body {
-        font-size: 15px;
+        font-size: 15px;    
     }
     
 }
+
+/* @media (max-height: 460px) {
+    body{
+        font-size: 7px;        
+    }
+    
+} */

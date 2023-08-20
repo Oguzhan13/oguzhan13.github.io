@@ -11,10 +11,10 @@ export function updateNavLinkStyle() {
             const sectionId = section.getAttribute('id');
             
             sectionLinks.forEach(link => {
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('section-link-active');
+                if (link.getAttribute('id') === `${sectionId}-section-link`) {
+                    link.classList.add('section-link-active');                    
                 } else {
-                    link.classList.remove('section-link-active');
+                    link.classList.remove('section-link-active');                  
                 }
             });
         }
