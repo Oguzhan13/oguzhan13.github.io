@@ -12,3 +12,46 @@
     animation: blink 0.7s infinite;
     opacity: 1;
 }
+
+#home{
+    color: var(--navbar-color);
+    background-image: url("../../assets/images/home-section-v-v1.jpg");
+    background-size: cover;
+    background-position: center bottom;   
+    display: flex;
+    flex-direction: column;    
+    font-size: xx-large;
+    position: relative;
+}
+
+#home h1, h3{
+    z-index: 2;
+}
+
+.background-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media (max-width: 767px){
+    #home{
+        font-size: large;        
+        background-image: url("../../assets/images/home-section-v-v1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+    #home{
+        font-size: x-large;        
+        /* background-image: url("../../assets/images/home-section-v-ydk3.jpg"); */
+        background-size: cover;
+        background-position: center;          
+    }
+}

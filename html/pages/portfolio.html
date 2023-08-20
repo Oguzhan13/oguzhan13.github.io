@@ -24,7 +24,7 @@
                 <li>
                     <a href="portfolio.html">OB Portfolio</a>
                 </li>
-                <li class="section-links">
+                <li class="section-links" id="nav-section-links">
                     <ul>
                         <li class="section-link" id="home-section-link">
                             <a href="#home">Home</a>
@@ -54,6 +54,19 @@
                             <a href="#contact">Contact</a>
                             <div class="link-border"></div>
                         </li>
+                        <li class="mobile-section-link">
+                            <div class="mobile-lang-menu">
+                                Language
+                                <img class="display-icon" id="mobile-lang-display-icon" src="../../assets/images/icons/angle-down-dark.svg" alt="Display Icon">
+                                <img class="hide-icon" id="mobile-lang-hide-icon" src="../../assets/images/icons/angle-up-dark.svg" alt="Hide Icon">
+                            </div>
+                            <div class="mobile-lang-dropdown" id="mobile-nav-lang-dropdown">
+                                <div class="mobile-lang-buttons">
+                                    <button class="mobile-en-button">EN</button>
+                                    <button class="mobile-tr-button">TR</button>
+                                </div>
+                            </div>                        
+                        </li>
                     </ul>
                     <li class="lang-menu">
                         Language
@@ -66,7 +79,7 @@
                     </li>
                 </li>
             </ul>
-            <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
+            <!-- <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a> -->
             <div class="lang-dropdown" id="nav-lang-dropdown">
                 <div class="lang-buttons">
                     <button class="en-button">EN</button>
@@ -77,6 +90,7 @@
     </header>
     <main>
         <section id="home">
+            <div class="background-overlay"></div>
             <h1>I am Oğuzhan Bayram</h1>     
             <h3 class="typed" id="typed-content" title-items="Full Stack Developer, Back-end Developer, .Net Developer, C# Developer"></h3>     
         </section>
@@ -101,40 +115,23 @@
     </main>
     <script type="module">
         import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
-        import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';
-        // import { handleResolutionChange } from '../../js/utils/handleResolutionChange.js';
+        import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
+        import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
         
-        window.addEventListener('DOMContentLoaded', updateNavLinkStyle);  
+        window.addEventListener('DOMContentLoaded', () => {
+            const htmlLang = document.documentElement.lang;
+            updateNavLinkStyle();  
+            toggleLanguage(htmlLang, '.en-button', '.tr-button');
+            toggleLanguage(htmlLang, '.mobile-en-button', '.mobile-tr-button');
+            titleAnimation('typed-content', 'title-items');
+        });
+        
         window.addEventListener('scroll', updateNavLinkStyle);
         
-        // const resolutionThreshold = 1023;
-        // const elementIdsToHide = ['lang-buttons', 'en-button', 'tr-button'];        
-        // handleResolutionChange(resolutionThreshold, elementIdsToHide);
-
-        const menuIcon = document.getElementById('nav-menu-icon');
-        const closeIcon = document.getElementById('nav-close-icon');
-        const sectionLinks = document.querySelector('.section-links');
-        const langMenu = document.querySelector('.lang-menu');
-        
-        menuIcon.addEventListener('click', () => {
-            menuIcon.style.display = 'none';
-            closeIcon.style.display = 'block';
-            sectionLinks.style.display = 'flex';
-            langMenu.style.display = 'flex';
-        });
-        
-        closeIcon.addEventListener('click', () => {
-            closeIcon.style.display = 'none';
-            menuIcon.style.display = 'block';
-            sectionLinks.style.display = 'none';
-            langMenu.style.display = 'none';
-        });
-
         toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex')
-
-        titleAnimation('typed-content', 'title-items');
-
-    </script>
+        toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
+        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex')
+    </script>    
 </body>
 </html>

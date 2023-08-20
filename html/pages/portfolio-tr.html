@@ -3,10 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio TR</title>
+    <title>Portfolio-TR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../css/portfolio/main.css" />
+    <link rel="stylesheet" href="../../css/portfolio/navbar.css" />
+    <link rel="stylesheet" href="../../css/portfolio/home.css" />
+    <link rel="stylesheet" href="../../css/portfolio/about.css" />
+    <link rel="stylesheet" href="../../css/portfolio/skill.css" />
+    <link rel="stylesheet" href="../../css/portfolio/project.css" />
+    <link rel="stylesheet" href="../../css/portfolio/education.css" />
+    <link rel="stylesheet" href="../../css/portfolio/career.css" />
+    <link rel="stylesheet" href="../../css/portfolio/contact.css" />    
 </head>
 <body>
-    Türkçe
-    <a href="portfolio.html">İngilizce sayfaya git</a>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="portfolio.html">OB Portfolio</a>
+                </li>
+                <li class="section-links" id="nav-section-links">
+                    <ul>
+                        <li class="section-link" id="home-section-link">
+                            <a href="#home">Ana Sayfa</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="about-section-link">
+                            <a href="#about">Hakkımda</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="skill-section-link">
+                            <a href="#skill">Yetenekler</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="project-section-link">
+                            <a href="#project">Projeler</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="education-section-link">
+                            <a href="#education">Eğitimler</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="career-section-link">
+                            <a href="#career">Kariyer</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="section-link" id="contact-section-link">
+                            <a href="#contact">İletişim</a>
+                            <div class="link-border"></div>
+                        </li>
+                        <li class="mobile-section-link">
+                            <div class="mobile-lang-menu">
+                                Dil
+                                <img class="display-icon" id="mobile-lang-display-icon" src="../../assets/images/icons/angle-down-dark.svg" alt="Display Icon">
+                                <img class="hide-icon" id="mobile-lang-hide-icon" src="../../assets/images/icons/angle-up-dark.svg" alt="Hide Icon">
+                            </div>
+                            <div class="mobile-lang-dropdown" id="mobile-nav-lang-dropdown">
+                                <div class="mobile-lang-buttons">
+                                    <button class="mobile-en-button">EN</button>
+                                    <button class="mobile-tr-button">TR</button>
+                                </div>
+                            </div>                        
+                        </li>
+                    </ul>
+                    <li class="lang-menu">
+                        Dil
+                        <img class="display-icon" id="lang-display-icon" src="../../assets/images/icons/angle-down.svg" alt="Display Icon">
+                        <img class="hide-icon" id="lang-hide-icon" src="../../assets/images/icons/angle-up.svg" alt="Hide Icon">                        
+                    </li>
+                    <li class="nav-menu">
+                        <img class="menu-icon" id="nav-menu-icon" src="../../assets/images/icons/menu.svg" alt="Menu Icon">
+                        <img class="close-icon" id="nav-close-icon" src="../../assets/images/icons/close.svg" alt="Close Icon">
+                    </li>
+                </li>
+            </ul>
+            <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
+            <div class="lang-dropdown" id="nav-lang-dropdown">
+                <div class="lang-buttons">
+                    <button class="en-button">EN</button>
+                    <button class="tr-button">TR</button>
+                </div>
+            </div>    
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Oğuzhan Bayram</h1>     
+            <h3 class="typed" id="typed-content" title-items="Full Stack Developer, Back-end Developer, .Net Developer, C# Developer"></h3>     
+        </section>
+        <section id="about">
+            <h1>Hakkımda</h1>            
+        </section>        
+        <section id="skill">
+            <h1>Yetenekler</h1>            
+        </section>        
+        <section id="project">
+            <h1>Projeler</h1>                        
+        </section>        
+        <section id="education">
+            <h1>Eğitimler</h1>            
+        </section>        
+        <section id="career">
+            <h1>Kariyer</h1>                        
+        </section>        
+        <section id="contact">
+            <h1>İletişim</h1>                        
+        </section>
+    </main>
+    <script type="module">
+        import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
+        import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
+        import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
+        import { titleAnimation } from '../../js/titleAnimation.js';
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            const htmlLang = document.documentElement.lang;
+            updateNavLinkStyle();  
+            toggleLanguage(htmlLang, '.en-button', '.tr-button');
+            toggleLanguage(htmlLang, '.mobile-en-button', '.mobile-tr-button');
+            titleAnimation('typed-content', 'title-items');
+        });
+        
+        window.addEventListener('scroll', updateNavLinkStyle);
+        
+        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex')
+        toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
+        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex')
+    </script>    
 </body>
 </html>
