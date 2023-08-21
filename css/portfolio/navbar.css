@@ -10,7 +10,7 @@
 
 /* --------------------------- nav-container --------------------------- */
 nav{
-    z-index: 3;
+    z-index: 4;
     opacity: 0.9;
     color: var(--navbar-color);
     background-color: var(--navbar-background-color);
@@ -90,7 +90,7 @@ nav ul li{
     align-items: center;
 }
 .lang-buttons{
-    z-index: 3;
+    z-index: 4;
     opacity: 0.9;    
     padding: 1rem;
     margin-right: 1rem;    

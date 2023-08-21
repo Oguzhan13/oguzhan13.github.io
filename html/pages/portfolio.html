@@ -90,39 +90,51 @@
     </header>
     <main>
         <section id="home">
+            <div class="background-overlay" id="home-background-overlay"></div>   
             <img class="background-img" id="home-background-img" src="../../assets/images/home-section.jpg" alt="home-bg-img" />
-            <div class="background-overlay"></div>          
             <h1>I am Oğuzhan Bayram</h1>     
             <h3 class="typed" id="typed-content" title-items="Full Stack Developer, Back-end Developer, .Net Developer, C# Developer"></h3>     
         </section>
-        <section id="about">            
+        <section id="about">    
             <div class="section-container" id="about-container">
+                <div class="background-overlay" id="about-background-overlay"></div>
                 <h1>About Me</h1><hr/>
             </div>
+            <img class="background-img" id="about-background-img" src="../../assets/images/home-section.jpg" alt="about-bg-img" />
         </section>        
         <section id="skill">
             <div class="section-container" id="skill-container">
+                <div class="background-overlay" id="skill-background-overlay"></div>
                 <h1>Skills</h1><hr>                
-            </div>
+            </div>            
+            <img class="background-img" id="skill-background-img" src="../../assets/images/home-section.jpg" alt="skill-bg-img" />
         </section>        
         <section id="project">   
             <div class="section-container" id="project-container">
+                <div class="background-overlay" id="project-background-overlay"></div>
                 <h1>Projects</h1>
-            </div>         
+            </div>                     
+            <img class="background-img" id="project-background-img" src="../../assets/images/project-section.jpg" alt="project-bg-img" />
         </section>        
         <section id="education">
             <div class="section-container" id="education-container">
-                <h1>Educations</h1>                        
+                <div class="background-overlay" id="education-background-overlay"></div>
+                <h1>Educations</h1>                     
             </div>
+            <img class="background-img" id="education-background-img" src="../../assets/images/education-section.jpg" alt="education-bg-img" />
         </section>        
         <section id="career">
             <div class="section-container" id="career-container">
-                <h1>Career</h1>                        
+                <h1>Career</h1>    
+                <div class="background-overlay" id="career-background-overlay"></div>                
             </div>            
+            <img class="background-img" id="career-background-img" src="../../assets/images/career-section.jpg" alt="career-bg-img" />
         </section>        
         <section id="contact">
             <div class="section-container" id="contact-container">
-                <h1>Contact</h1> 
+                <div class="background-overlay" id="contact-background-overlay"></div>
+                <h1>Contact</h1>                 
+                <img class="background-img" id="contact-background-img" src="../../assets/images/project-section.jpg" alt="contact" />
             </div>             
         </section>
     </main>
@@ -132,6 +144,7 @@
         import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
         import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
+        import { changeBackgroundOnScroll } from '../../js/changeBackgroundOnScroll.js';
         
         window.addEventListener("load", checkResolution);
         window.addEventListener("resize", checkResolution);
@@ -142,6 +155,7 @@
             toggleLanguage(htmlLang, '.en-button', '.tr-button');
             toggleLanguage(htmlLang, '.mobile-en-button', '.mobile-tr-button');
             titleAnimation('typed-content', 'title-items');
+            changeBackgroundOnScroll();
         });
         
         window.addEventListener('scroll', updateNavLinkStyle);
