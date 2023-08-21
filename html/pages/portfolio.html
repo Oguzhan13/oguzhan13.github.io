@@ -79,7 +79,6 @@
                     </li>
                 </li>
             </ul>
-            <!-- <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a> -->
             <div class="lang-dropdown" id="nav-lang-dropdown">
                 <div class="lang-buttons">
                     <button class="en-button">EN</button>
@@ -87,6 +86,7 @@
                 </div>
             </div>    
         </nav>
+        <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
     </header>
     <main>
         <section id="home">
@@ -114,11 +114,15 @@
         </section>
     </main>
     <script type="module">
+        import { checkResolution } from '../../js/checkResolution.js';
         import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
         import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
         import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
         
+        window.addEventListener("load", checkResolution);
+        window.addEventListener("resize", checkResolution);
+
         window.addEventListener('DOMContentLoaded', () => {
             const htmlLang = document.documentElement.lang;
             updateNavLinkStyle();  
@@ -129,9 +133,10 @@
         
         window.addEventListener('scroll', updateNavLinkStyle);
         
-        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex')
+        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex');
         toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
-        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex')
+        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex');
+
     </script>    
 </body>
 </html>

@@ -10,7 +10,7 @@
 
 /* --------------------------- nav-container --------------------------- */
 nav{
-    z-index: 1;
+    z-index: 2;
     opacity: 0.9;
     color: var(--navbar-color);
     background-color: var(--navbar-background-color);
@@ -174,7 +174,7 @@ nav ul li{
     transform: scale(1.1);
 }
 
-.lang-button-active{
+/* .lang-button-active{
     cursor: pointer;
     background-color: var(--blue-color);
     color: var(--navbar-color);
@@ -183,26 +183,7 @@ nav ul li{
     font-size: large;
     box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem black;
     border-radius: 0.2rem;    
-}
-
-.slide-up{
-    cursor: pointer;
-    opacity: 0.5;
-    background-color: var(--dark-text-color);
-    box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem black;
-    border-radius: 50%;
-    transform: scale(0.3);
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    transition: 0.3s ease-in-out;
-    z-index: 1;
-}
-.slide-up:hover{
-    opacity: 1;
-    background-color: var(--blue-color);
-    transform: scale(0.35);
-}
+} */
 
 /* ************************************** SMALL SCREEN ************************************** */
 @media(max-width: 1023px){
@@ -319,9 +300,5 @@ nav ul li{
 
     .display-icon:hover{
         transform: scale(1);
-    }
-        
-    .slide-up{
-        transform: scale(0.25);        
     }
 }
