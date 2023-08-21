@@ -26,33 +26,38 @@ export function changeBackgroundOnScroll() {
     };
 
     function changeBackground() {
-        if (window.scrollY >= thresholds.about && window.scrollY < thresholds.skill) {
-            homeBackgroundImg.style.display = "none";
-            aboutBackgroundImg.style.display = "block";
-        } else if (window.scrollY >= thresholds.skill && window.scrollY < thresholds.project) {
-            aboutBackgroundImg.style.display = "none";
-            skillBackgroundImg.style.display = "block";
-        } else if (window.scrollY >= thresholds.project && window.scrollY < thresholds.education) {
-            skillBackgroundImg.style.display = "none";
-            projectBackgroundImg.style.display = "block";
-        } else if (window.scrollY >= thresholds.education && window.scrollY < thresholds.career) {
-            projectBackgroundImg.style.display = "none";
-            educationBackgroundImg.style.display = "block";
-        } else if (window.scrollY >= thresholds.career && window.scrollY < thresholds.contact) {
-            educationBackgroundImg.style.display = "none";
-            careerBackgroundImg.style.display = "block";
-        } else if (window.scrollY >= thresholds.contact) {
-            careerBackgroundImg.style.display = "none";
-            contactBackgroundImg.style.display = "block";
-        } else {
-            homeBackgroundImg.style.display = "block";
-            aboutBackgroundImg.style.display = "none";
-            skillBackgroundImg.style.display = "none";
-            projectBackgroundImg.style.display = "none";
-            educationBackgroundImg.style.display = "none";
-            careerBackgroundImg.style.display = "none";
-            contactBackgroundImg.style.display = "none";
+        const scrollY = window.scrollY;
+        let activeSection = "";
+
+        switch (true) {
+            case scrollY >= thresholds.about && scrollY < thresholds.skill:
+                activeSection = "about";
+                break;
+            case scrollY >= thresholds.skill && scrollY < thresholds.project:
+                activeSection = "skill";
+                break;
+            case scrollY >= thresholds.project && scrollY < thresholds.education:
+                activeSection = "project";
+                break;
+            case scrollY >= thresholds.education && scrollY < thresholds.career:
+                activeSection = "education";
+                break;
+            case scrollY >= thresholds.career && scrollY < thresholds.contact:
+                activeSection = "career";
+                break;
+            case scrollY >= thresholds.contact:
+                activeSection = "contact";
+                break;
+            default:
+                activeSection = "home";
         }
+        
+        homeBackgroundImg.style.zIndex = activeSection === "home" || activeSection === "about" ? -1 : -2;        
+        skillBackgroundImg.style.zIndex = activeSection === "skill" ? -1 : -2;
+        projectBackgroundImg.style.zIndex = activeSection === "project" ? -1 : -2;
+        educationBackgroundImg.style.zIndex = activeSection === "education" ? -1 : -2;
+        careerBackgroundImg.style.zIndex = activeSection === "career" ? -1 : -2;
+        contactBackgroundImg.style.zIndex = activeSection === "contact" ? -1 : -2;
     }
 
     window.addEventListener("scroll", changeBackground);
