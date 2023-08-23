@@ -22,7 +22,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="portfolio-tr.html">OB Portfolio</a>
+                    <a href="portfolio.html">OB Portfolio</a>
                 </li>
                 <li class="section-links" id="nav-section-links">
                     <ul>
@@ -79,7 +79,6 @@
                     </li>
                 </li>
             </ul>
-            <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
             <div class="lang-dropdown" id="nav-lang-dropdown">
                 <div class="lang-buttons">
                     <button class="en-button">EN</button>
@@ -87,51 +86,84 @@
                 </div>
             </div>    
         </nav>
+        <a class="slide-up" href="#home"><img src="../../assets/images/icons/slide-up.svg" alt="Slide Up"></a>
     </header>
     <main>
         <section id="home">
-            <div class="background-overlay"></div>
+            <div class="background-overlay" id="home-background-overlay"></div>   
+            <img class="background-img" id="home-background-img" src="../../assets/images/home-section.jpg" alt="home-bg-img" />
             <h1>Oğuzhan Bayram</h1>     
             <h3 class="typed" id="typed-content" title-items="Full Stack Developer, Back-end Developer, .Net Developer, C# Developer"></h3>     
         </section>
-        <section id="about">
-            <h1>Hakkımda</h1>            
+        <section id="about">    
+            <div class="section-container" id="about-container">
+                <div class="background-overlay" id="about-background-overlay"></div>
+                <h1>Hakkımda</h1><hr/>
+            </div>
+            <img class="background-img" id="about-background-img" src="../../assets/images/home-section.jpg" alt="about-bg-img" />
         </section>        
         <section id="skill">
-            <h1>Yetenekler</h1>            
+            <div class="section-container" id="skill-container">
+                <div class="background-overlay" id="skill-background-overlay"></div>
+                <h1>Yetenekler</h1><hr>                
+            </div>            
+            <img class="background-img" id="skill-background-img" src="../../assets/images/skill-section.jpg" alt="skill-bg-img" />
         </section>        
-        <section id="project">
-            <h1>Projeler</h1>                        
+        <section id="project">   
+            <div class="section-container" id="project-container">
+                <div class="background-overlay" id="project-background-overlay"></div>
+                <h1>Projeler</h1>
+            </div>                     
+            <img class="background-img" id="project-background-img" src="../../assets/images/project-section.jpg" alt="project-bg-img" />
         </section>        
         <section id="education">
-            <h1>Eğitimler</h1>            
+            <div class="section-container" id="education-container">
+                <div class="background-overlay" id="education-background-overlay"></div>
+                <h1>Eğitimler</h1>                     
+            </div>
+            <img class="background-img" id="education-background-img" src="../../assets/images/education-section.jpg" alt="education-bg-img" />
         </section>        
         <section id="career">
-            <h1>Kariyer</h1>                        
+            <div class="section-container" id="career-container">
+                <h1>Kariyer</h1>    
+                <div class="background-overlay" id="career-background-overlay"></div>                
+            </div>            
+            <img class="background-img" id="career-background-img" src="../../assets/images/career-section.jpg" alt="career-bg-img" />
         </section>        
         <section id="contact">
-            <h1>İletişim</h1>                        
+            <div class="section-container" id="contact-container">
+                <div class="background-overlay" id="contact-background-overlay"></div>
+                <h1>İletişim</h1>                 
+                <img class="background-img" id="contact-background-img" src="../../assets/images/contact-section.jpg" alt="contact" />
+            </div>             
         </section>
-    </main>
+    </main>    
     <script type="module">
+        import { checkResolution } from '../../js/checkResolution.js';
         import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
         import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
         import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
+        import { changeBackgroundOnScroll } from '../../js/changeBackgroundOnScroll.js';
         
+        window.addEventListener("load", checkResolution);
+        window.addEventListener("resize", checkResolution);
+
         window.addEventListener('DOMContentLoaded', () => {
             const htmlLang = document.documentElement.lang;
             updateNavLinkStyle();  
             toggleLanguage(htmlLang, '.en-button', '.tr-button');
             toggleLanguage(htmlLang, '.mobile-en-button', '.mobile-tr-button');
             titleAnimation('typed-content', 'title-items');
+            changeBackgroundOnScroll();
         });
         
         window.addEventListener('scroll', updateNavLinkStyle);
         
-        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex')
+        toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex');
         toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
-        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex')
+        toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex');
+
     </script>    
 </body>
 </html>
