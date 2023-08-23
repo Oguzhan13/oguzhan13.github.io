@@ -17,9 +17,16 @@
 #about-background-overlay{
     opacity: 0.3;
     width: 100%;
-    height: 25rem;
-    background-color: var(--dark-text-color);
+    height: 20rem;    
+    background: linear-gradient(135deg, red, yellow, orange);
     position: absolute; 
-    bottom: -25rem;
+    bottom: -20rem;
     z-index: 2;
+}
+
+@media(max-width: 1023px){
+    #about-background-overlay{
+        height: 10rem;
+        bottom: -10rem;
+    }
 }

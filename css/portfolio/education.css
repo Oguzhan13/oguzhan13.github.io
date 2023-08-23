@@ -17,9 +17,18 @@
 #education-background-overlay{
     opacity: 0.5;
     width: 100%;
-    height: 25rem;
-    background-color: var(--dark-text-color);
+    height: 20rem;    
+    background: linear-gradient(45deg, purple, blueviolet, cornflowerblue, yellowgreen, darkgoldenrod, coral, crimson );
+    color: yellowgreen;
     position: absolute; 
-    bottom: -25rem;
+    bottom: -20rem;
     z-index: 2;
+}
+
+
+@media(max-width: 1023px){
+    #education-background-overlay{
+        height: 10rem;
+        bottom: -10rem;
+    }
 }
