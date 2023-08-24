@@ -65,15 +65,10 @@
     padding: 1rem 0;
 }
 
-.researched-topic{
-    display: flex;
-    justify-content: space-between;
-}
 .researched-topic-content{
     padding: 1rem 3rem;
     line-height: 2;
-    list-style: circle;
-    display: none;
+    list-style: circle;    
 }
 
 
