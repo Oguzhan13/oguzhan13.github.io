@@ -76,8 +76,12 @@
     align-items: center;
 }
 
+.skill-space{
+    width: 1.9rem;
+}
+
 .progress-container {        
-    width: 70%;
+    width: 100%;
     height: 0.7rem;
     background-color: #9b8cf1d8;
     border-radius: 0.2rem;
@@ -109,6 +113,10 @@
 
     .progress-container{
         height: 0.6rem;
+    }
+
+    .skill-progress-item{
+        width: 60%;   
     }
     
 }
