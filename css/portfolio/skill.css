@@ -91,7 +91,7 @@
     border-radius: 0.2rem;
     width: 0;
     position: absolute;
-    transition: width 1s ease-in-out;
+    transition: width 2.5s ease-in-out;
 }
 
 
