@@ -24,10 +24,60 @@
     z-index: 2;
 }
 
+#project-section-content{
+    margin: 1rem;
+    padding: 1rem;
+    width: 75%;
+    font-size: large;
+    text-align: justify;
+    line-height: 2;
+    box-shadow: 1px 1px 4px 1px;
+    border-radius: 0.2rem;    
+}
+
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-content{
+    padding: 1rem 1rem;
+    list-style: circle;
+    display: none;
+}
+.project-content a{
+    color: var(--blue-color);
+    text-decoration: none;    
+}
+/* .project-content a:visited{
+    color: var(--dark-blue-color);
+} */
+.go-github{        
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-icon{
+    width: 1.2rem;
+    height: 1.2rem;    
+}
 
 @media(max-width: 1023px){
     #project-background-overlay{
         height: 10rem;
         bottom: -10rem;
+    }
+
+    #project-section-content{
+        width: 100%;
+        font-size: small;
+    }
+
+    .link-icon{
+        width: 0.8rem;
+        height: 0.8rem;    
     }
 }
