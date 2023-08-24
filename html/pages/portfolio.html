@@ -99,6 +99,48 @@
             <div class="section-container" id="about-container">
                 <div class="background-overlay" id="about-background-overlay"></div>
                 <h1>About Me</h1><hr/>
+                <div class="section-content-container" id="about-content-container">
+                    <div class="section-content" id="about-section-content">
+                        <div class="section-content-item" id="about-profile">
+                            <img src="../../assets/images/summary-photo.png">
+                            <div class="profile-info">
+                                <ul>
+                                    <strong>
+                                        <li>Date Of Birth:</li>
+                                        <li>Military Service:</li>
+                                        <li>Driver's License:</li>
+                                    </strong>                                    
+                                </ul>
+                                <ul>
+                                    <li>08/09/1991</li>
+                                    <li>Fulfilled</li>
+                                    <li>B, B1, D1, F, M</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-content-item" id="about-summary">
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fresh graduate of the .NET Framework training program at Bilge Adam Academy. Self-motivated and result-driven professional committed to pursuing a long-term career change into software engineering, especially full stack or backend development. A quick learner who can absorb new ideas and can communicate clearly and effectively.
+                            </p>                        
+                        </div>
+                        <div class="section-content-item">
+                            <div class="researched-topic">
+                                <strong> <p>Researched Topics</p></strong>
+                                <img class="display-icon" id="topic-display-icon" src="../../assets/images/icons/angle-down-dark.svg">
+                                <img class="hide-icon"  id="topic-hide-icon" src="../../assets/images/icons/angle-up-dark.svg">
+                            </div>
+                            <hr/>
+                            <ul class="researched-topic-content" id="topic-content">
+                                <li>SOLID principles</li>
+                                <li>Design patterns for software architecture</li>
+                                <li>N-Tier Architecture, Onion Architecture, Clean Architecture, Vertical Slice Architecture</li>
+                                <li>Authentication with JWT and refresh token</li>
+                                <li>Role-based authorization</li>
+                                <li>API entegration with React or ASP .NET Core MVC projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <img class="background-img" id="about-background-img" src="../../assets/images/home-section.jpg" alt="about-bg-img" />
         </section>        
@@ -163,6 +205,7 @@
         toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex');
         toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
         toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex');
+        toggleHiddenContent('topic-display-icon', 'topic-hide-icon', 'topic-content', 'block');
 
     </script>    
 </body>

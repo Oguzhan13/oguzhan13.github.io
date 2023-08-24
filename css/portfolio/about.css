@@ -24,9 +24,74 @@
     z-index: 2;
 }
 
+#about-content-container{    
+    display: flex;    
+    justify-content: center;
+}
+
+#about-section-content{
+    margin: 1rem;
+    padding: 1rem;
+    width: 75%;
+    font-size: large;
+    text-align: justify;
+    line-height: 1.5;
+    box-shadow: 1px 1px 4px 1px;
+    border-radius: 0.2rem;    
+}
+
+#about-profile{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#about-profile img{
+    width: 10rem;
+    height: 10rem;
+    border: 0.5rem solid var(--dark-blue-color);
+    border-radius: 50%;
+}
+
+.profile-info{
+    line-height: 2.5;
+    display: flex;
+    gap: 1rem;
+}
+.profile-info ul{
+    list-style: none;
+}
+
+#about-summary{
+    padding: 1rem 0;
+}
+
+.researched-topic{
+    display: flex;
+    justify-content: space-between;
+}
+.researched-topic-content{
+    padding: 1rem 3rem;
+    line-height: 2;
+    list-style: circle;
+    display: none;
+}
+
+
 @media(max-width: 1023px){
     #about-background-overlay{
         height: 10rem;
         bottom: -10rem;
+    } 
+
+    #about-section-content{
+        width: auto;
+        font-size: small;
+    }
+    
+    #about-profile img{
+        width: 6rem;
+        height: 6rem;
+        border: 0.3rem solid var(--dark-blue-color);
+        border-radius: 50%;
     }
 }

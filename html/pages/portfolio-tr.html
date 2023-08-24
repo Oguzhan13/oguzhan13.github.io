@@ -98,7 +98,49 @@
         <section id="about">    
             <div class="section-container" id="about-container">
                 <div class="background-overlay" id="about-background-overlay"></div>
-                <h1>Hakkımda</h1><hr/>
+                <h1>About Me</h1><hr/>
+                <div class="section-content-container" id="about-content-container">
+                    <div class="section-content" id="about-section-content">
+                        <div class="section-content-item" id="about-profile">
+                            <img src="../../assets/images/summary-photo.png">
+                            <div class="profile-info">
+                                <ul>
+                                    <strong>
+                                        <li>Doğum Tarihi:</li>
+                                        <li>Askerlik:</li>
+                                        <li>Sürücü Lisansı:</li>
+                                    </strong>                                    
+                                </ul>
+                                <ul>
+                                    <li>08/09/1991</li>
+                                    <li>Yapıldı</li>
+                                    <li>B, B1, D1, F, M</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-content-item" id="about-summary">          
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bilge Adam Akademi .NET Framework eğitim programından yeni mezun oldum. Kendini motive eden ve sonuç odaklı bir profesyonel olarak, özellikle full stack veya backend geliştirme alanında uzun vadeli bir kariyer değişikliği yapma konusunda kararlıyım. Yeni fikirleri hızlıca öğrenen, açık ve etkili bir şekilde iletişim kurabilen bir öğrenciyim.
+                            </p>                                        
+                        </div>
+                        <div class="section-content-item">
+                            <div class="researched-topic">
+                                <strong> <p>Araştırılan Konu Başlıkları</p></strong>
+                                <img class="display-icon" id="topic-display-icon" src="../../assets/images/icons/angle-down-dark.svg">
+                                <img class="hide-icon"  id="topic-hide-icon" src="../../assets/images/icons/angle-up-dark.svg">
+                            </div>
+                            <hr/>
+                            <ul class="researched-topic-content" id="topic-content">
+                                <li>SOLID prensipleri</li>
+                                <li>Yazılım mimarisi için tasarım desenleri</li>
+                                <li>N-Katmanlı Mimari, Soğan Mimari, Temiz Mimari, Dikey Dilim Mimari</li>
+                                <li>JWT ve refresh token ile kimlik doğrulama işlemleri</li>
+                                <li>Rol tabanlı yetkilendirme işlemleri</li>
+                                <li>React veya ASP .NET Core MVC projeleri ile API entegrasyonu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <img class="background-img" id="about-background-img" src="../../assets/images/home-section.jpg" alt="about-bg-img" />
         </section>        
@@ -163,6 +205,7 @@
         toggleHiddenContent('lang-display-icon', 'lang-hide-icon', 'nav-lang-dropdown', 'flex');
         toggleHiddenContent('nav-menu-icon', 'nav-close-icon', 'nav-section-links', 'flex');
         toggleHiddenContent('mobile-lang-display-icon', 'mobile-lang-hide-icon', 'mobile-nav-lang-dropdown', 'flex');
+        toggleHiddenContent('topic-display-icon', 'topic-hide-icon', 'topic-content', 'block');
 
     </script>    
 </body>
