@@ -34,7 +34,7 @@ section{
 }
 .slide-up:hover{
     opacity: 1;
-    background-color: var(--blue-color);
+    background-color: var(--dark-blue-color);
     transform: scale(0.35);
 }
 

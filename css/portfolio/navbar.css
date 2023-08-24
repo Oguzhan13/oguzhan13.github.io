@@ -154,7 +154,7 @@ nav ul li{
     transition: 0.3s ease-in-out;
 }
 .en-button:hover{
-    background-color: var(--blue-color);
+    background-color: var(--dark-blue-color);
     color: var(--navbar-color);
     transform: scale(1.1);
 }
@@ -169,7 +169,7 @@ nav ul li{
     transition: 0.3s ease-in-out;    
 }
 .tr-button:hover{    
-    background-color: var(--blue-color);
+    background-color: var(--dark-blue-color);
     color: var(--navbar-color);
     transform: scale(1.1);
 }
