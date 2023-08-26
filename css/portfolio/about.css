@@ -66,7 +66,7 @@
 }
 
 .researched-topic-content{
-    padding: 1rem 3rem;
+    padding: 1rem 0 0 2rem;
     line-height: 2;
     list-style: circle;    
 }
@@ -78,11 +78,20 @@
         bottom: -10rem;
     } 
 
+    .profile-info{
+        line-height: 2.5;
+        gap: 0.2rem;
+    }
+
     #about-section-content{
         width: auto;
         font-size: small;
     }
     
+    #about-profile{
+        gap: 0.2rem;
+    }
+
     #about-profile img{
         width: 6rem;
         height: 6rem;
