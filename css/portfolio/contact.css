@@ -42,11 +42,18 @@
 }
 .social-media-links{
     list-style: none;
+    padding-right: 1rem;
+    border-right: 0.1rem solid var(--light-text-color);
 }
+
 .social-media-link{
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: 0.5s ease-in-out;
+}
+.social-media-link a:hover{
+    color: var(--light-text-color);    
 }
 .social-media-link img{
     width: 3rem;
@@ -54,6 +61,14 @@
 .social-media-link a{
     color: var(--blue-color);
     text-decoration: none;
+}
+#resume-link{
+    justify-content: space-between;
+}
+#resume-link div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .mail-form{
@@ -68,6 +83,7 @@
     width: 100%;
     height: 60%;
     font-size: large;
+    color: var(--dark-text-color);
 }
 #message{
     margin: 1rem;
@@ -88,6 +104,19 @@
     transform: scale(1.05);
 }
 
+.download-icon{    
+    background-color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+    border-radius: 0.2rem;
+    transform: scale(0.7);
+    transition: 0.5s ease-in-out;
+}
+.download-icon:hover{
+    background-color: var(--blue-color);
+    border: 0.1rem solid var(--blue-color);
+    transform: scale(0.75);
+}
+
 @media(max-width: 1023px){
     #contact-background-overlay{
         height: 10rem;
@@ -99,6 +128,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+    }
+
+    .social-media-links{
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid var(--light-text-color);
     }
 
     .mail-form textarea{        
