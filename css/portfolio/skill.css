@@ -106,7 +106,7 @@
     }
     
     #skill-content{
-        margin: 2rem;
+        margin: 1rem;
         width: 100%;
         font-size: small;
     }
@@ -116,7 +116,7 @@
     }
 
     .skill-progress-item{
-        width: 60%;   
+        width: 65%;   
     }
     
 }
