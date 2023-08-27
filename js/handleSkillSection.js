@@ -3,8 +3,7 @@ import { animateProgressBars } from './animateProgressBars.js';
 
 export function handleSkillSection() {
     const sections = document.querySelectorAll('section');
-    const sectionLinks = document.querySelectorAll('.section-link');
-
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
@@ -13,8 +12,19 @@ export function handleSkillSection() {
         if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
             const sectionId = section.getAttribute('id');
 
-            if (sectionId === 'skill') {
+            if (sectionId === 'about') {
+                const aboutSectionVisibleHeight = sectionTop + sectionHeight - scrollPosition;
+                const aboutSectionThreshold = 0.5 * sectionHeight;
+
+                if (aboutSectionVisibleHeight <= aboutSectionThreshold) {
+                    animateProgressBars();
+                } else {
+                    resetProgressBars();
+                }
+            } else if (sectionId === 'skill'){
                 animateProgressBars();
+            } else if (sectionId === 'project') {
+                resetProgressBars();
             } else {
                 resetProgressBars();
             }            
