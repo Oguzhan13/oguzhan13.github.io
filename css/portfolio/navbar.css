@@ -315,4 +315,13 @@ nav ul li{
     .hide-icon:hover{
         transform: scale(1.1);
     }
+
+    #mobile-lang-display-icon{
+        width: 1.7rem;
+        height: 1.7rem;        
+    }
+    #mobile-lang-hide-icon{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
 }
