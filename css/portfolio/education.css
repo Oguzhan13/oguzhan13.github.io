@@ -36,7 +36,7 @@
     font-size: large;
     line-height: 1.5;
     text-align: justify;
-    box-shadow: 1px 1px 4px 2px;
+    box-shadow: 1px 1px 4px 0 black;
     display: flex;
     flex-direction: column;
     gap: 2rem;

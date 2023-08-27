@@ -31,7 +31,7 @@
     font-size: large;
     text-align: justify;
     line-height: 2;
-    box-shadow: 1px 1px 4px 1px;
+    box-shadow: 1px 1px 4px 0 black;
     border-radius: 0.2rem;    
 }
 
