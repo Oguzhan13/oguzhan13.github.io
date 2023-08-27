@@ -1,0 +1,102 @@
+
+#career{    
+    position: relative;
+}
+
+#career-background-img {    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -2;
+}
+
+#career-background-overlay{
+    opacity: 0.5;
+    width: 100%;
+    height: 20rem;        
+    background: linear-gradient(45deg,sienna, chocolate, chocolate, coral);    
+    position: absolute; 
+    bottom: -20rem;
+    z-index: 2;
+}
+
+#career-content-container{
+    display: flex;
+    justify-content: center;
+}
+#career-content{
+    width: 70%;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: large;
+    line-height: 1.5;
+    text-align: justify;
+    box-shadow: 1px 1px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.career-content{
+    width: 100%;    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;       
+}
+
+.career-content .display-icon{
+    z-index: 1;
+}
+.career-content .hide-icon{
+    z-index: 1;
+}
+
+.career-logo-img{    
+    max-height: 100%;
+    position: absolute;
+    opacity: 0.2;    
+}
+
+.career-header{    
+    width: 100%;    
+}
+
+.career-display-content{    
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.career-hidden-content{
+    width: 100%;
+    padding: 1rem 2rem;        
+    list-style: circle;
+    display: none;    
+}
+
+.go-career{
+    display: flex;
+    justify-content: flex-end;
+}
+.go-career a{
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+@media(max-width: 1023px){
+    #career-background-overlay{
+        height: 10rem;
+        bottom: -10rem;
+    }
+
+    #career-content{
+        width: 100%;
+        font-size: small;
+    }
+}
