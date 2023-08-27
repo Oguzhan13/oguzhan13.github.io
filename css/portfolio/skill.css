@@ -118,5 +118,9 @@
     .skill-progress-item{
         width: 55%;   
     }
+
+    .skill-space{
+        width: 1.2rem;
+    }
     
 }

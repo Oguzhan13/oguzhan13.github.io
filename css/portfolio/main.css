@@ -27,15 +27,15 @@ section{
     border-radius: 50%;
     transform: scale(0.3);
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: -1.5rem;    
+    right: -2.5rem;
     transition: 0.3s ease-in-out;
     z-index: 3;
 }
 .slide-up:hover{
     opacity: 1;
     background-color: var(--dark-blue-color);
-    transform: scale(0.35);
+    transform: scale(0.32);
 }
 
 /* ************************************** SMALL SCREEN ************************************** */
