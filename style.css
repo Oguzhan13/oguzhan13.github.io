@@ -26,6 +26,16 @@ header{
     background-color: var(--navbar-background-color);
 }
 
+footer ul{
+    height: 5rem;
+    list-style: none;
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* ----------------------------------------- @media 767px -----------------------------------------  */
 @media (max-width: 767px) {
     body {
