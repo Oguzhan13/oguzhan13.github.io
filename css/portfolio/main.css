@@ -18,6 +18,13 @@ section{
 .section-container h1{
     margin: 1rem;
 }
+.section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* --------------------------- slide-up --------------------------- */
 .slide-up{
     cursor: pointer;

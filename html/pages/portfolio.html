@@ -118,7 +118,7 @@
                         </div>
                         <div class="section-content-item" id="about-summary">
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;Fresh graduate of the .NET Framework training program at Bilge Adam Academy. Self-motivated and result-driven professional committed to pursuing a long-term career change into software engineering, especially full stack or backend development. A quick learner who can absorb new ideas and can communicate clearly and effectively.
+                                &nbsp;&nbsp;&nbsp;&nbsp;Fresh graduate of the Software training program at Bilge Adam Academy. Self-motivated and result-driven professional committed to pursuing a long-term career change into software engineering, especially full stack or backend development. A quick learner who can absorb new ideas and can communicate clearly and effectively.
                             </p>                        
                         </div>
                         <div class="section-content-item">
@@ -659,7 +659,11 @@
         <section id="project">   
             <div class="section-container" id="project-container">
                 <div class="background-overlay" id="project-background-overlay"></div>
-                <h1 style="text-align: center;">Projects</h1>
+                <div class="section-header">
+                    <h1>Projects</h1>
+                    <i class="fa-solid fa-eye fa-xl" id="open-projects" style="color: #000000; cursor: pointer"></i> 
+                    <i class="fa-solid fa-eye-slash fa-xl" id="close-projects" style="color: #000000; cursor: pointer; display: none;"></i>
+                </div>
                 <div class="section-content-container" id="about-content-container">
                     <div class="section-content" id="project-section-content">
                         <div class="project-header">
@@ -762,8 +766,12 @@
         </section>        
         <section id="education">
             <div class="section-container" id="education-container">
-                <div class="background-overlay" id="education-background-overlay"></div>
-                <h1 style="text-align: center;">Educations</h1>  
+                <div class="background-overlay" id="education-background-overlay"></div>                
+                <div class="section-header">
+                    <h1>Educations</h1>
+                    <i class="fa-solid fa-eye fa-xl" id="open-educations" style="color: #000000; cursor: pointer"></i> 
+                    <i class="fa-solid fa-eye-slash fa-xl" id="close-educations" style="color: #000000; cursor: pointer; display: none;"></i>
+                </div> 
                 <div class="section-content-container" id="education-content-container">
                     <div class="section-content" id="education-content">
                         <div class="education-content">
@@ -836,8 +844,12 @@
             <img class="background-img" id="education-background-img" src="../../assets/images/education-section.jpg" alt="education-bg-img" />
         </section>        
         <section id="career">
-            <div class="section-container" id="career-container">
-                <h1 style="text-align: center;">Career</h1>
+            <div class="section-container" id="career-container">                
+                <div class="section-header">
+                    <h1>Career</h1>
+                    <i class="fa-solid fa-eye fa-xl" id="open-career" style="color: #000000; cursor: pointer"></i> 
+                    <i class="fa-solid fa-eye-slash fa-xl" id="close-career" style="color: #000000; cursor: pointer; display: none;"></i>
+                </div>
                 <div class="section-content-container" id="career-content-container">
                     <div class="section-content" id="career-content">
                         <div class="career-content">
@@ -989,6 +1001,7 @@
         import { checkResolution } from '../../js/checkResolution.js';
         import { updateNavLinkStyle } from '../../js/updateNavLinkStyle.js';
         import { toggleHiddenContent } from '../../js/utils/toggleHiddenContent.js';        
+        import { toggleHiddenContents } from '../../js/utils/toggleHiddenContents.js';        
         import { toggleLanguage } from '../../js/utils/toggleLanguage.js';
         import { titleAnimation } from '../../js/titleAnimation.js';
         import { changeBackgroundOnScroll } from '../../js/changeBackgroundOnScroll.js';         
@@ -1020,6 +1033,7 @@
         toggleHiddenContent('css-display-icon', 'css-hide-icon', 'scss-content', 'block');
         toggleHiddenContent('reactjs-display-icon', 'reactjs-hide-icon', 'nextjs-content', 'block');
         toggleHiddenContent('orm-display-icon', 'orm-hide-icon', 'orm-content', 'block');
+        toggleHiddenContents('open-projects', 'close-projects', 'block', ['exarion-content', 'konfides-content', 'ajax-content', 'n-tier-content', 'jwt-content', 'watchdog-content', 'ba-campus-content']);
         toggleHiddenContent('exarion-display-icon', 'exarion-hide-icon', 'exarion-content', 'block');
         toggleHiddenContent('konfides-display-icon', 'konfides-hide-icon', 'konfides-content', 'block');
         toggleHiddenContent('ajax-display-icon', 'ajax-hide-icon', 'ajax-content', 'block');
@@ -1027,9 +1041,11 @@
         toggleHiddenContent('jwt-display-icon', 'jwt-hide-icon', 'jwt-content', 'block');
         toggleHiddenContent('watchdog-display-icon', 'watchdog-hide-icon', 'watchdog-content', 'block');
         toggleHiddenContent('ba-campus-display-icon', 'ba-campus-hide-icon', 'ba-campus-content', 'block');
+        toggleHiddenContents('open-educations', 'close-educations', 'block', ['bilge-adam-academy-hidden-content', 'ktu-hidden-content', 'aksu-hidden-content']);
         toggleHiddenContent('bilge-adam-academy-display-icon', 'bilge-adam-academy-hide-icon', 'bilge-adam-academy-hidden-content', 'block');
         toggleHiddenContent('ktu-display-icon', 'ktu-hide-icon', 'ktu-hidden-content', 'block');
         toggleHiddenContent('aksu-display-icon', 'aksu-hide-icon', 'aksu-hidden-content', 'block');
+        toggleHiddenContents('open-career', 'close-career', 'block', ['bilge-adam-technology-hidden-content', 'baytimur-hidden-content', 'hapa-hidden-content', 'hk-hidden-content', 'formgd-hidden-content', 'mil-hidden-content']);
         toggleHiddenContent('bilge-adam-technology-display-icon', 'bilge-adam-technology-hide-icon', 'bilge-adam-technology-hidden-content', 'block');
         toggleHiddenContent('baytimur-display-icon', 'baytimur-hide-icon', 'baytimur-hidden-content', 'block');
         toggleHiddenContent('hapa-display-icon', 'hapa-hide-icon', 'hapa-hidden-content', 'block');
